@@ -16,7 +16,7 @@ def fetch_data(path):
     with open(path) as f:
         for line in f:
             t = line.strip().split(' - ')
-            data.append({'Expense Name' : t[0].strip(), 'Expense Amount' : float(t[1].strip())})
+            data.append({'ename' : t[0].strip(), 'examt' : float(t[1].strip())})
 
     return data
 
@@ -30,14 +30,14 @@ def view_expenses(data):
     print("-------------------------------------------")
 
     for i in data:
-        print(i['Expense Name'], '-', i['Expense Amount'])
+        print(i['ename'], '-', i['examt'])
 
     return data
 
 
 ## Add expense
 def add_expense(path, d, e_name, e_amt):
-    d.append({"Expense Name": e_name, 'Expense Amount': float(e_amt)})
+    d.append({"ename": e_name, 'examt': float(e_amt)})
 
     with open(path, 'a') as f:
         f.write(e_name.capitalize() + ' - ' + str(e_amt) + '\n')
@@ -50,7 +50,7 @@ def calc_all_expenses(data):
     total = 0
 
     for i in data:
-        total += i['Expense Amount']
+        total += i['examt']
 
     return round(total, 2)
 
@@ -60,7 +60,7 @@ def search_exp_by_name(data, name):
     # name = input("Enter the expense name you need to search for: ")
 
     for i in data:
-        if i['Expense Name'].lower() == name:
+        if i['ename'].lower() == name:
             return i
 
 
@@ -69,51 +69,51 @@ def del_expense_by_name(data, name):
     delete = {}
 
     for i in data:
-        if i['Expense Name'].lower() == name:
+        if i['ename'].lower() == name:
             data.remove(i)
             delete = i
 
     with open(path, 'w') as f:
         for i in data:
-            f.write(i["Expense Name"] + " - " + str(i["Expense Amount"]) + '\n')
+            f.write(i["ename"] + " - " + str(i["examt"]) + '\n')
 
     return delete
 
 
 ## Filter expense by amount
 def filter_data_desc(data):
-    filter_data = data
+    fd = data
 
-    for i in range(len(filter_data)):
-        for j in range(i+1, len(filter_data)):
-            if filter_data[i]['Expense Amount'] < filter_data[j]['Expense Amount']:
-                filter_data[i], filter_data[j] = filter_data[j], filter_data[i]
-    return filter_data
+    for i in range(len(fd)):
+        for j in range(i+1, len(fd)):
+            if fd[i]['examt'] < fd[j]['examt']:
+                fd[i], fd[j] = fd[j], fd[i]
+    return fd
 
 
 def filter_data_asc(data):
-    filter_data = data
+    fd = data
 
-    for i in range(len(filter_data)):
-        for j in range(i+1, len(filter_data)):
-            if filter_data[i]['Expense Amount'] > filter_data[j]['Expense Amount']:
-                filter_data[i], filter_data[j] = filter_data[j], filter_data[i]
-    return filter_data
+    for i in range(len(fd)):
+        for j in range(i+1, len(fd)):
+            if fd[i]['examt'] > fd[j]['examt']:
+                fd[i], fd[j] = fd[j], fd[i]
+    return fd
 
 
 ## Filtering the data
 def filter_above_range(data, r):
     fil_data = []
     for i in data:
-        if i['Expense Amount'] >= r:
+        if i['examt'] >= r:
             fil_data.append(i)
     return fil_data
 
 
-def filter_above_range(data, r):
+def filter_below_range(data, r):
     fil_data = []
     for i in data:
-        if i['Expense Amount'] <= r:
+        if i['examt'] <= r:
             fil_data.append(i)
     return fil_data
 
@@ -122,7 +122,7 @@ def filter_above_range(data, r):
 def save_file(path, data):
     with open(path, 'w') as f:
         for i in data:
-            f.write(i["Expense Name"] + ' - ' + str(i['Expense Amount']) + '\n')
+            f.write(i["ename"] + ' - ' + str(i['examt']) + '\n')
     
 
 # print(fetch_data(path))
@@ -135,21 +135,21 @@ def save_file(path, data):
 
 
 while True:
-    path = 'E:\\Vidya Career\\IT JOB\\Repati Kosam\\rk_Projects\\day_9_expenses.txt'
+    path = r'E:\Vidya Career\IT JOB\Repati Kosam\Week 2\Projects\day_9_expenses.txt'
 
     data = fetch_data(path)
 
     print("================== EXPENSE TRACKER ==================")
-    print("1. Add expense\n2. View all expenses\n3. Calculate all the expenses\n4. Search expense by name\n 5. Delete expense\n6. Filter expense by amount\n7. Save expenses\n8. Exit")
+    print("1. Add expense\n2. View all expenses\n3. Calculate all the expenses\n4. Search expense by name\n5. Delete expense\n6. Filter expense by amount\n7. Save expenses\n8. Exit")
 
-    ch = int(input("Enter the choice: "))
+    ch = int(input("Enter the choice (1 - 8): "))
 
     if ch == 8:
         break
 
 
     elif ch == 1:
-        name = input("Enter your expense name: ")
+        name = input("Enter your expense name: ").strip().lower()
         s = search_exp_by_name(data, name)
         if s:
             print("Expense Name already exists!!")
@@ -162,10 +162,11 @@ while True:
         
 
     elif ch == 2:
-        view_expenses(data)
+        print(view_expenses(data))
+
 
     elif ch == 3:
-        view_expenses(data)
+        print(view_expenses(data))
         t = calc_all_expenses(data)
         print('-------------------------------------------------------')
         print("The total amount of all the expenses is: ", t)
@@ -177,7 +178,7 @@ while True:
         s = search_exp_by_name(data, name)
         if s:
             print("The searched expense is: ")
-            print(f"Expense name: {s['Expense Name']} - {s['Expense Amount']}")
+            print(f"Expense name: {s['ename']} - {s['examt']}")
         else:
             print("Expense not found !!")
 
@@ -189,39 +190,41 @@ while True:
             d = del_expense_by_name(data, name)
             print("Expense has been deleted successfully !!")
             print("The Expense details are: ")
-            print(f"Expense name: {d['Expense Name']} - Expense Amount: {d['Expense Amount']}")
+            print(f"Expense name: {d['ename']} - Expense Amount: {d['examt']}")
 
+        else:
             print(f"No expense found with the name: '{name}'")
 
 
     elif ch == 6:
         print("1. Sort from HIGH to LOW")
         print("2. Sort from LOW to HIGH")
-        print("3. Sort the data above given range of amount")
-        print("4. Sort the data below given range of amount")
+        print("3. Sort the data above the given range of amount")
+        print("4. Sort the data below the given range of amount")
+
         c1 = int(input("Enter your choice for filtering :"))
         
         if c1 == 1:
-            sd = filter_data_desc(data)
-            print("Sorted data from High to low")
-            view_data(sd)
+            fd = filter_data_desc(data)
+            print("Sorted the data from high to low")
+            print(view_expenses(fd))
 
         elif c1 == 2:
-            sd = filter_data_asc(data)
-            print("Sorted data from Low to High")
-            view_data(sd)
+            fd = filter_data_asc(data)
+            print("Sorted the data from low to High")
+            print(view_expenses(fd))
 
         elif c1 == 3:
-            r = float(input("Enter the range of amount :"))
+            r = float(input("Enter the range of amount:"))
             print(f"The Expenses with amount greater than or equal to '{r}'")
-            sd = filter_above_range(data, r)
-            view_data(sd)
+            fd = filter_above_range(data, r)
+            print(view_expenses(fd))
 
         elif c1 == 4:
-            r = float(input("Enter the range of amount :"))
+            r = float(input("Enter the range of amount:"))
             print(f"The Expenses with amount Less than or equal to '{r}'")
-            sd = filter_below_range(data, r)
-            view_data(sd)
+            fd = filter_below_range(data, r)
+            print(view_expenses(fd))
 
         else:
             print('Invalid Choice !!')
@@ -229,7 +232,7 @@ while True:
 
     elif ch == 7:
         if data:
-            save_data(path, data)
+            save_file(path, data)
             print("Data saved successfully !!!")
         else:
             print("No data found to be saved !!")
