@@ -46,9 +46,9 @@ def get_name_by_marks(d, m):
 
 
 ## ADD STUDENT DATA
-def add_stud(path):
-    name = input("Enter the name of student: ").strip()
-    marks = input(f"Enter the marks of {name}: ").strip()
+def add_stud(path, name, marks):
+    # name = input("Enter the name of student: ").strip()
+    # marks = input(f"Enter the marks of {name}: ").strip()
 
     with open(path, 'a') as f:
         f.write(name + ', ' + marks + '\n')
@@ -128,7 +128,7 @@ def save_data(path, d):
 
 
 while True:
-    path = 'E:\\Vidya Career\\IT JOB\\Repati Kosam\\rk_Projects\\day_8_students.txt'
+    path = r'E:\Vidya Career\IT JOB\Repati Kosam\Week 2\Projects\day_8_students.txt'
 
     d = get_stud_data(path)
 
@@ -190,7 +190,7 @@ while True:
         if s:
             marks = input(f"Enter the marks of {name}: ").strip()
             stud = update_marks(path, name, marks)
-            print(f"{stud['name']}'s marks updated to marks : '{marks}' successfully")
+            print(f"{stud['name']}'s marks updated to marks '{marks}' successfully")
         else:
             print(f"Student with name: {name} doesnot exist")
             print('Try again')
@@ -201,7 +201,7 @@ while True:
         s = search_stud(d, name)
         if s:
             stud = delete_student(path, name)
-            print(f"Student with name: {name} has been deleted successfully")
+            print(f"Student with name {name} has been deleted successfully")
         else:
             print(f"Student with name {name} does not exist")
 
