@@ -4,6 +4,8 @@ num2 = int(input("Enter num2:"))
 def sum_of_two_num(num1, num2):
     return num1 + num2
 
+print(sum_of_two_num(num1, num2))
+
 
 ## Check Even or Odd
 num = int(input("Enter the number:"))
