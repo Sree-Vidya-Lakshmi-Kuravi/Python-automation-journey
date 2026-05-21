@@ -1,0 +1,7 @@
+List Operations
+String Operations
+Functions
+Dictionary Operations
+File Handling
+namaste
+hii

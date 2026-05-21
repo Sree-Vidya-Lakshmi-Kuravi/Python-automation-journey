@@ -1,0 +1,10 @@
+Groceries - 2500
+Electricity Bill - 1200
+Internet Recharge - 800
+Movie Tickets - 600
+Dinner at Restaurant - 1500
+Fuel - 2000
+Gym Membership - 1000
+Books - 700
+Mobile Recharge - 400
+Snacks - 300Panipuri - 45.0
