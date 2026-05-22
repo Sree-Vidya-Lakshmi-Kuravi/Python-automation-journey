@@ -8,3 +8,4 @@ Gym Membership - 1000.0
 Books - 700.0
 Mobile Recharge - 400.0
 Snacks - 300.0
+Samosa - 67.0
