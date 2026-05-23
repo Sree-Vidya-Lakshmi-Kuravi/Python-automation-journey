@@ -74,10 +74,12 @@ a1 = Animal("ani")
 a1.sound()
 
 d1 = Dog("Dog", "bochu_kukka")
+print("Species:", d1.species)
 print("Name:", d1.name)
 d1.sound()
 
 c1 = Cat("Cat", "thella_pilli")
+print("Species:", c1.species)
 print("Name:", c1.name)
 c1.sound()
 
