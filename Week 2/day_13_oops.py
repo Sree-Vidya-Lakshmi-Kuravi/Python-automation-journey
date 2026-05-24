@@ -32,17 +32,26 @@ class BankAccount:
         self.__balance = balance
 
     def deposit(self, d_amt):
-        self.__balance += d_amt
-        print("Deposited Amount:", d_amt)
-        # print(f"Balance:", self.__balance)
+        if d_amt < 0:
+            print("Deposited amount should not be negative.")
+        else:
+            self.__balance += d_amt
+            print("Deposited Amount:", d_amt)
+            print("Amount deposited successfully...")
+            # print(f"Balance:", self.__balance)
 
     def withdraw(self, w_amt):
-        if w_amt > self.__balance:
-            print("Insufficient Balance")
+        if w_amt < 0:
+            print("Withdrawal amount should not be negative")
         else:
-            self.__balance -= w_amt
-            print("Withdrawal Amount:", w_amt)
-            # print(f"Balance:", self.__balance)
+            if w_amt > self.__balance:
+                print("Insufficient Balance")
+            else:
+                self.__balance -= w_amt
+                print("Withdrawal Amount:", w_amt)
+                print("Amount withdrew successfully..")
+                # print(f"Balance:", self.__balance)
+
 
     def check_balance(self):
         print("Account Holder Name:", self.name)
@@ -50,6 +59,6 @@ class BankAccount:
 
 b1 = BankAccount("BVNS", 150000)
 # b1.check_balance()
-# b1.deposit(5000)
-b1.withdraw(4500)
+b1.deposit(5000)
+# b1.withdraw(9500)
 b1.check_balance()
