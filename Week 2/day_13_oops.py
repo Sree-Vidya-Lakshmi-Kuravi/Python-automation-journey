@@ -1,6 +1,8 @@
 ## OOPS
 
 # Employee System
+# - Parent class: Employee || Attributes: name, salary - Child class: Manager || Add department || Use super()
+
 class Employee:
     
     def __init__(self, name, salary):
@@ -24,6 +26,7 @@ class Manager(Employee):
 
 
 ## Bank Account
+# - Add encapsulation use __balance - Create class: BankAccount || Methods: deposit(), withdraw(), check_balance()
 
 class BankAccount:
     
