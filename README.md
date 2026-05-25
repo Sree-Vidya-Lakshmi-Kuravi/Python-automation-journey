@@ -57,7 +57,9 @@ The goal of this repository is to build a strong foundation in:
 - Classes
 - Objects
 - Methods
+- super()
 - Inheritance
+- Encapsulation
 
 ------------------------------------------------------------------------------
 
