@@ -19,7 +19,6 @@ def palindrome_check(str):
     return orig == rev
 
 
-
 def vowel_count(s):
     count = 0
     for i in s:
