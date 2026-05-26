@@ -3,6 +3,7 @@ def get_stud_data(path):
 
     with open(path) as f:
         t = f.readlines()
+        
     t1 = []
 
     for i in t:

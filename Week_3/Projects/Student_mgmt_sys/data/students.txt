@@ -8,8 +8,8 @@ Hannah,88
 Ian,74
 Julia,85
 mahi,100
-bvns,92
 Siri,78
-Mani, 88
-Mani, 88
-PB, 45
+Mani,88
+PB,45
+Sree Vidya,67
+YBMR,77

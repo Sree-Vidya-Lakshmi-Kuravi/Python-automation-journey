@@ -5,7 +5,7 @@ path = 'data/students.txt'
 
 try:
     while True:
-
+        stu_m = StudentManager(path)
         print("--------------------------------------------- STUDENT MANAGEMENT SYSTEM ---------------------------------------------")
 
         print("""
@@ -20,7 +20,6 @@ try:
         9. Exit""")
 
         try:
-            stu_m = StudentManager(path)
 
             ch = int(input("Enter your choice (1 - 9): "))
 
@@ -35,7 +34,7 @@ try:
             elif ch == 2:
                 try:
                     name = input("Enter the name of student: ").strip()
-                    marks = input(f"Enter the marks of {name}: ").strip()
+                    marks = int(input(f"Enter the marks of {name}: "))
                     stu_m.add_student(name, marks)
 
                 except ValueError:
@@ -46,19 +45,22 @@ try:
                 name = input("Enter the name of the student you need to search for: ").strip()
                 stud = stu_m.search_stu(name)
                 if stud:
-                    print('Name : ', stud['name'], '\n' + 'Marks : ', stud['marks'])
+                    print('The student has been found successfully')
+                    print("Name: ", stud['name'])
+                    print("Marks: ", stud['marks'])
+
                 else:
                     print(f"No such student with name '{name}' found")
 
 
             elif ch == 4:
                 name = input("Enter the student name: ")
-                s = search_stud(d, name)
+                s = stu_m.search_stu(name)
 
                 if s:
                     marks = input(f"Enter the marks of {name}: ").strip()
-                    stud = update_marks(path, name, marks)
-                    print(f"{stud['name']}'s marks updated to marks '{marks}' successfully")
+                    stud = stu_m.update_mar(name, marks)
+                    print(f"{name}'s marks updated to marks '{marks}' successfully")
                 else:
                     print(f"Student with name: {name} doesnot exist")
                     print('Try again')
@@ -66,51 +68,24 @@ try:
                 
             elif ch == 5:
                 name = input("Enter the student name you want to delete: ")
-                s = search_stud(d, name)
+                s = stu_m.search_stu(name)
                 if s:
-                    stud = delete_student(path, name)
+                    stud = stu_m.delete_stud(name)
                     print(f"Student with name {name} has been deleted successfully")
                 else:
                     print(f"Student with name {name} does not exist")
 
                 
             elif ch == 6:
-                if d:
-                    avg = average_marks(d)
-                    print(f"The average marks of the class is: {avg}")
-                else:
-                    print("No student data found")
+                stu_m.get_avg()
 
 
             elif ch == 7:
-                ts = max_marks(d)
-                students = get_name_by_marks(d, ts)
-
-                if students:
-                    if len(students) == 1:
-                        print("The topper of the class is: ")
-                        print("Name: ", students[0]['name'])
-                        print("Marks: ", students[0]['marks'])
-
-                    else:
-                        print("The toppers of the class are: ")
-
-                        for i in students:
-                            print("-----------------")
-                            print("Name: ", i['name'])
-                            print("Marks: ", i['marks'])
-                else:
-                    print('No data found !!!!')
+                stu_m.get_topper()
 
 
             elif ch == 8:
-                if d:
-                    data = save_data(path, d)
-                    print("The data has been saved successfully in the file !!!")
-
-                else:
-                    print("No data is found")
-
+                stu_m.save_data()
 
             else:
                 print("Wrong Choice :(")

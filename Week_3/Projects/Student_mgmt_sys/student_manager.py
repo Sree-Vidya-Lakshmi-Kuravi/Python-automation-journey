@@ -16,16 +16,19 @@ class StudentManager:
             print(i.get('name'), ':', i.get('marks'))
 
 
-
     def get_avg(self):
         avg = average_marks(self.data)
         print("The average marks of the students:", avg)
 
     
     def add_student(self, name, marks):
-        add_data = add_stud(self.path, name, marks)
-        self.data.append(add_data)
-        print("The student has been added successfully")
+        found = search_stud(self.data, name)
+        if not found:
+            add_data = add_stud(self.path, name, marks)
+            self.data.append(add_data)
+            print("The student has been added successfully")
+        else:
+            print(f"Student with {name} already exists")
 
 
     def update_mar(self, name, marks):
@@ -35,21 +38,40 @@ class StudentManager:
 
     def delete_stud(self, name):
         del_data = delete_student(self.path, self.data, name)
-        print('Student has been deleted successfully')
 
     
     def search_stu(self, name):
-        found = search_stud(self.data, name)
-        if found:
-            print("The student has been found successfully")
-            return 
-        else:
-            print("The student not found")
+        return search_stud(self.data, name)
 
+
+    def get_topper(self):
+        max_m = max_marks(self.data)
+        top = get_name_by_marks(self.data, max_m)
+
+        if top:
+            if len(top) == 1:
+                print("The topper of the class is: ")
+                print("Name: ", top[0]['name'])
+                print("Marks: ", top[0]['marks'])
+
+            else:
+                print("The toppers of the class are: ")
+
+                for i in top:
+                    print("-----------------")
+                    print("Name: ", i['name'])
+                    print("Marks: ", i['marks'])
+        else:
+            print('No data found !!!!')
+
+
+    def save_data(self):
+        save_data(self.path, self.data)
 
 if __name__ == '__main__':
     sm = StudentManager('data/students.txt')   # while executing in terminal, the path should be made into the folder 
     # sm.view_studs()
 
-    sm.add_student('Mani', 88)
-    sm.view_studs()
+    # sm.add_student('Mani', 88)
+    sm.search_stu('bvns')
+    # sm.view_studs()
