@@ -1,3 +1,5 @@
+# main.py - where the code runs
+
 from student_manager import StudentManager
 
 
