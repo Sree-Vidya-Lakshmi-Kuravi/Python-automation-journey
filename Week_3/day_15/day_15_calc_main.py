@@ -1,3 +1,5 @@
+## main.py for calc.py
+
 from day_15_calc import *
 
 while True:

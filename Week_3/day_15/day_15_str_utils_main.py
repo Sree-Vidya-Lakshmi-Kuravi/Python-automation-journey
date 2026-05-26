@@ -1,3 +1,5 @@
+# main.py for str_utils.py
+
 from day_15_string_utils import *
 
 while True:
