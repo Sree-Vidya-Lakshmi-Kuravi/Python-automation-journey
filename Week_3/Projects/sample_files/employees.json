@@ -1,0 +1,32 @@
+[
+    {
+        "name": "John",
+        "department": "QA",
+        "salary": 50000
+    },
+    {
+        "name": "Alice",
+        "department": "Development",
+        "salary": 65000
+    },
+    {
+        "name": "Bob",
+        "department": "HR",
+        "salary": 48000
+    },
+    {
+        "name": "Sophia",
+        "department": "Marketing",
+        "salary": 55000
+    },
+    {
+        "name": "David",
+        "department": "Support",
+        "salary": 47000
+    },
+    {
+        "name": "bvns",
+        "department": "qa",
+        "salary": 89000
+    }
+]
