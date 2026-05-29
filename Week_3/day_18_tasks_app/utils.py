@@ -1,6 +1,9 @@
+
+# viewing tasks
 def view_tasks(data):
     pass
 
+# adding tasks
 def add_task(path, title, description, priority, status = Pending):
     pass
 
