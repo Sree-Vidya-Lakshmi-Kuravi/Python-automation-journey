@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "title": "Learn Selenium Locators",
+        "description": "Practice id, xpath and css selectors",
+        "priority": "High",
+        "status": "Pending"
+    },
+    {
+        "id": 2,
+        "title": "Complete Python OOP Revision",
+        "description": "Revise inheritance and encapsulation concepts",
+        "priority": "Medium",
+        "status": "Completed"
+    },
+    {
+        "id": 3,
+        "title": "Build Login Automation Script",
+        "description": "Automate login functionality using Selenium",
+        "priority": "High",
+        "status": "In Progress"
+    },
+    {
+        "id": 4,
+        "title": "Practice DSA Arrays",
+        "description": "Solve array traversal and duplicate problems",
+        "priority": "Medium",
+        "status": "Pending"
+    },
+    {
+        "id": 5,
+        "title": "Read JSON Handling Documentation",
+        "description": "Understand json.load and json.dump methods",
+        "priority": "Low",
+        "status": "Completed"
+    },
+    {
+        "id": 6,
+        "title": "Create Expense Tracker Refactor",
+        "description": "Convert old project into modular structure",
+        "priority": "Medium",
+        "status": "In Progress"
+    },
+    {
+        "id": 7,
+        "title": "Setup Virtual Environment",
+        "description": "Create and activate venv for Selenium project",
+        "priority": "High",
+        "status": "Completed"
+    },
+    {
+        "id": 8,
+        "title": "Practice Exception Handling",
+        "description": "Handle invalid inputs in existing projects",
+        "priority": "Medium",
+        "status": "Pending"
+    },
+    {
+        "id": 9,
+        "title": "Prepare GitHub README",
+        "description": "Document automation learning journey",
+        "priority": "Low",
+        "status": "Completed"
+    },
+    {
+        "id": 10,
+        "title": "Learn Requests Library",
+        "description": "Practice API requests and JSON parsing",
+        "priority": "High",
+        "status": "In Progress"
+    }
+]
