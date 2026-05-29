@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "title": "Learn Selenium Locators",
+        "title": "Learn Selenium",
         "description": "Practice id, xpath and css selectors",
         "priority": "High",
         "status": "Pending"

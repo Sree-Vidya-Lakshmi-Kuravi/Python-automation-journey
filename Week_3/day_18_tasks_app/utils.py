@@ -7,6 +7,7 @@ def view_tasks(data):
 def add_task(path, title, description, priority, status = Pending):
     pass
 
+# seaching the tasks
 def search_task_by_title(data, title):
     pass
 

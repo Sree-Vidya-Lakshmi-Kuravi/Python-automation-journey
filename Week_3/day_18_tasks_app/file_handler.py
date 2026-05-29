@@ -19,5 +19,5 @@ def save_data(path, data):
     try:
         pass
     except Exception as e:
-        print('Some exception has occurred')
+        print('Something went wrong')
 
