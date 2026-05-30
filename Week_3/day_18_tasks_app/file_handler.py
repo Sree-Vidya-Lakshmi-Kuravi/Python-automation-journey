@@ -9,8 +9,8 @@ def get_data(path):
             tasks = json.load(file)
         return tasks
 
-    except FileNotFoundError:
-        print("No such file found")
+    except Exception as e:
+        print("Some exception occurred!!", e)
 
 # print(get_data(path))
 
@@ -22,5 +22,4 @@ def save_data(path, data):
             json.dump(data, f, indent = 4)
 
     except Exception as e:
-        print('Something went wrong')
-
+        print('Some exception occurred!!', e)

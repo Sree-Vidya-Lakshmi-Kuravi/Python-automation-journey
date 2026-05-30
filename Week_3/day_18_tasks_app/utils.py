@@ -1,122 +1,177 @@
 
-from file_handler import *
+class TaskTitleEmptyError(Exception):
+    pass
 
-def add_task():
+class TaskStatusError(Exception):
+    pass
 
-    data = get_data(path)
-
-    id = int(input("Enter task id:"))
-    title = input("Enter task title:")
-    description = input("Enter task description:")
-    priority = input("Enter task priority:")
-
-    new_task = {
-        "id": id,
-        "title": title,
-        "description": description,
-        "priority": priority,
-        "status": "Pending"
-    }
-
-    data.append(new_task)
-
-    save_data(path, data)
-    print("Data has been added successfully")
-
-# add_task()
+class TaskPriorityError(Exception):
+    pass
 
 
-def view_tasks():
-    data = get_data(path)
+def add_data(data, title, description, author, status):
 
-    for i in data:
-        print("ID:", i['id'], "Title:", i['title'], "||", "Description:", i['description'], '||', "Priority:", i['priority'], '||', "Status:", i['status'])
-        print('-------------------------------------------------------------------------------------------------------------------')
+    if not status:
+        status = "Pending"
 
-# view_tasks()
+    try:
+        if title == "":
+            raise TaskTitleEmptyError
 
+        if priority not in ("Low", "High", "Medium"):
+            raise TaskPriorityError
 
-def search_task_by_title(title):
-    data = get_data(path)
+        if status not in ("Pending", "In Progress", "Completed"):
+            raise TaskStatusError
 
-    for d in data:
-        if d['title'] == title:
-            return d
+        if title != "" and priority in ("Low", "Medium", "High") and status in ("Pending", "In Progress", "Completed"):
+            data = data.copy()
 
-    else:
-        print("No such task found")
+            new_task = {
+                "id": id,
+                "title": title,
+                "description": description,
+                "priority": priority,
+                "status": "Pending"
+            }
 
+            return new_task
 
-# print(search_task_by_title("xxx"))
-
-
-def search_task_by_id(id):
-    data = get_data(path)
-
-    for d in data:
-        if d['id'] == id:
-            return d
-
-    else:
-        print("No such task found")
-
-# print(search_task_by_id(12))
-
-
-def update_task_status_c(id):
+    except TaskTitleEmptyError:
+        print("Task title must not be empty")
     
-    data = get_data(path)
+    except TaskPriorityError:
+        print("Task priority must be Low/Medium/High")
 
-    for d in data:
-        d['status'] = "Completed"
+    except TaskStatusError:
+        print("Task status must be Pending/In Progress/Completed")
 
-    return d
-    # save_data(path, data)
-
-print(update_task_status_c(10))
-
-
-def delete_task(id):
-    data = get_data(path)
-    s = search_task_by_id(id)
-
-    if s != "No such task found":
-
-        if s['id'] == id:
-            del s
-            
-            # save_data(path, data)
-            print("Task deleted successfully")
-        else:
-            print("ID not found")
-
-    else:
-        print("No such task found")
-
-# print(delete_task(11))
+    except Exception as e:
+        print("Some exception has been occurred!!", e)
 
 
-def filter_task_by_status(status):
-    data = get_data(path)
+
+def view_data(data):
+    data = data.copy()
+
+    try:
+        for i in data:
+            print("ID:", i['id'])
+            print("Title:", i['title'])
+            print("Description:", i['description'])
+            print('Priority:', i['priority'])
+            print('Status:', i['status'])
+            print('-------------------------------------------------------------------------------------------------------------------')
+
+    except Exception as e:
+        print("Some Exception occurred in view_data !!", e)
+
+
+
+def search_data_by_id(data, id):
+    data = data.copy()
+    found = []
+
+    try:
+        for d in data:
+            if d.get('id') == id:
+                found.append(d)
+                break
+        return found
+
+    except Exception as e:
+        print('Some exception occurred in search_data_by_id!!', e)
+
+
+
+def search_data_by_title(data, title):
+    data = data.copy()
+    found = []
+
+    try:
+        for d in data:
+            if d.get('title') == title:
+                found.append(d)
+                break
+        return found
+
+    except Exception as e:
+        print('Some exception occurred in search_data_by_title!!', e)
+
+
+
+def filter_data_by_status(data, status):
+    data = data.copy()
     stat = []
 
-    for i in data:
-        if i['status'] == status:
-            stat.append(i)
-    return stat
+    try:
+        for i in data:
+            if i.get('status') == status:
+                stat.append(i)
+        view_data(stat)
+        return stat
 
-# print(filter_task_by_status("Completed"))
+    except Exception as e:
+        print("Some exception occurred in filter_data_by_status!!", e)
 
 
-def filter_task_by_priority(priority):
-    data = get_data(path)
+
+def filter_data_by_priority(data, priority):
+    data = data.copy()
     prior = []
 
-    for i in data:
-        if i['priority'] == priority:
-            prior.append(i)
-    return prior
+    try:
+        for i in data:
+            if i.get('status') == status:
+                prior.append(i)
+        view_data(prior)
+        return prior
 
-# print(filter_task_by_priority("High"))
+    except Exception as e:
+        print("Some exception occurred in filter_data_by_priority!!", e)
 
 
+def update_status(data, id, status):
+    try:
+        for d in data:
+            if d.get('id') == id:
+                d['status'] = status
+                print("Task has been updated successfully !!")
+                break
+
+    except Exception as e:
+        print("Some exception occurred in update_status !!", e)
+
+
+def update_prior(data, id, priority):
+    try:
+        for d in data:
+            if d.get('id') == id:
+                d['priority'] = priority
+                print("Task has been updated successfully !!")
+                break
+    except Exception as e:
+        print("Some exception occurred in update_prior !!", e)
+
+
+
+def delete_by_id(data, id):
+    try:
+        deleted = []
+        for d in data:
+            if d.get('id') == id:
+                deleted.append(d)
+                data.remove(d)
+                break
+        else:
+            print(f"Task with id: {id} is not found")
+        return deleted
+
+    except Exception as e:
+        print("Some exception occurred in delete_by_id !!")
+
+
+def  redefine_id(data):
+    for d in range(len(data)):
+        data[d]['id'] += 1
+    
