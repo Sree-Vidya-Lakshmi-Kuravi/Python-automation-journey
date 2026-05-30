@@ -3,8 +3,6 @@
 from file_handler import *
 from utils import *
 
-path = r'E:\Vidya Career\IT JOB\Repati Kosam\Week_3\day_18_tasks_app\tasks.json'
-
 class TaskManager:
 
     def __init__(self, path):
@@ -85,9 +83,94 @@ class TaskManager:
         except Exception as e:
             print("Some exception has occurred !!", e)
 
-    
 
 
-tm = TaskManager(path)
+    def search_task_id(self, id):
+        s = search_data_by_id(self.__data, id)
 
-    
+        if f:
+            print(f"Task with id: {id} found")
+            view_data(f)
+
+        else:
+            print(f"Task with id: {id} not found")
+
+
+    def update_task_status(self, id):
+        try:
+            s = search_data_by_id(self.__data, id)
+
+            if s:
+                print(f"Select the status choice to update task with id: {id}")
+                print("1. Pending")
+                print("2. In Progress")
+                print("3. Completed")
+
+                ch = input("Enter your choice (1/2/3):")
+
+                if ch == "1":
+                    update_status(self.__data, id, 'Pending')
+
+                elif ch == "2":
+                    update_status(self.__data, id, 'In Progress')
+
+                elif ch == "3":
+                    update_status(self.__data, id, 'Completed')
+
+                else:
+                    print("Invalid choice !!")
+
+            else:
+                print(f"Task with id: {id} not found")
+
+        except Exception as e:
+            print("Some exception occurred !!", e)
+
+
+
+    def update_task_priority(self, id):
+        try:
+            s = search_data_by_id(self.__data, id)
+
+            if s:
+                print(f"Select the priority choice to update task with id: {id}")
+                print("1. Low")
+                print("2. Medium")
+                print("3. High")
+
+                ch = input("Enter your choice (1/2/3):")
+
+                if ch == "1":
+                    update_prior(self.__data, id, 'Low')
+
+                elif ch == "2":
+                    update_prior(self.__data, id, 'Medium')
+
+                elif ch == "3":
+                    update_prior(self.__data, id, 'High')
+
+                else:
+                    print("Invalid choice !!")
+
+            else:
+                print(f"Task with id: {id} not found")
+
+        except Exception as e:
+            print("Some exception occurred !!", e)
+
+
+
+    def delete_task_by_id(self, id):
+        d = delete_by_id(self.__data, id)
+
+        if d:
+            print("--------------- Deleted task ---------------")
+            view_data(d)
+            redefine_id(self.__data)
+
+
+if __name__ == '__main__':
+
+    path = r'E:\Vidya Career\IT JOB\Repati Kosam\Week_3\day_18_tasks_app\tasks.json'
+    tm = TaskManager(path)
+
