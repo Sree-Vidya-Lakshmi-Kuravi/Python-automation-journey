@@ -9,7 +9,7 @@ class TaskPriorityError(Exception):
     pass
 
 
-def add_data(data, title, description, author, status):
+def add_data(data, title, description, priority, status):
 
     if not status:
         status = "Pending"
