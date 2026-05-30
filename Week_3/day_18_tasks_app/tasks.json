@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "title": "Learn Selenium",
+        "title": "Learn Selenium Locators",
         "description": "Practice id, xpath and css selectors",
         "priority": "High",
         "status": "Pending"
@@ -68,5 +68,12 @@
         "description": "Practice API requests and JSON parsing",
         "priority": "High",
         "status": "In Progress"
+    },
+    {
+        "id": 11,
+        "title": "xxx",
+        "description": "yyyy",
+        "priority": "High",
+        "status": "Pending"
     }
 ]

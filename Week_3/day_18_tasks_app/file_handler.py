@@ -7,7 +7,8 @@ def get_data(path):
     try:
         with open(path) as file:
             tasks = json.load(file)
-            return tasks
+        return tasks
+
     except FileNotFoundError:
         print("No such file found")
 
@@ -17,7 +18,9 @@ def get_data(path):
 # save data
 def save_data(path, data):
     try:
-        pass
+        with open(path, 'w', newline = '') as f:
+            json.dump(data, f, indent = 4)
+
     except Exception as e:
         print('Something went wrong')
 
