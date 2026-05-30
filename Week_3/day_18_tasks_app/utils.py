@@ -71,10 +71,9 @@ def update_task_status_c(id):
         d['status'] = "Completed"
 
     return d
-
     # save_data(path, data)
 
-# print(update_task_status_c(10))
+print(update_task_status_c(10))
 
 
 def delete_task(id):
