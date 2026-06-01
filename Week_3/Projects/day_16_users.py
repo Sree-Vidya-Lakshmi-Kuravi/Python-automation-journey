@@ -7,7 +7,6 @@
 
 import requests
 
-
 # All users
 
 def fetch_all_users(url):
