@@ -1,0 +1,11 @@
+Groceries - 2500.0
+Electricity Bill - 1200.0
+Internet Recharge - 800.0
+Movie Tickets - 600.0
+Dinner at Restaurant - 1500.0
+Fuel - 2000.0
+Gym Membership - 1000.0
+Books - 700.0
+Mobile Recharge - 400.0
+Snacks - 300.0
+Samosa - 67.0
