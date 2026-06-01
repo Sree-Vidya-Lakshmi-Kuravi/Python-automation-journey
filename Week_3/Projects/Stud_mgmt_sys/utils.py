@@ -4,7 +4,7 @@ def search_stud(d, name):
     for i in d:
         if i['name'] == name.strip():
             return i
-        
+
 
 def average_marks(d):
     s = 0
