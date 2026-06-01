@@ -1,4 +1,4 @@
-## Student Marks Analyzer
+## Student Marks Analyzer Project
 
 import Lists
 
