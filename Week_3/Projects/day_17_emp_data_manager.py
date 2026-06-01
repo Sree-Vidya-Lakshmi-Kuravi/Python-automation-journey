@@ -8,7 +8,6 @@ path = r'E:\Vidya Career\IT JOB\Repati Kosam\Week_3\Projects\sample_files\employ
 
 j_path = r'E:\Vidya Career\IT JOB\Repati Kosam\Week_3\Projects\sample_files\employees.json'
 
-
 ## Data loading
 # csv data loading
 def load_csv_f(path):
