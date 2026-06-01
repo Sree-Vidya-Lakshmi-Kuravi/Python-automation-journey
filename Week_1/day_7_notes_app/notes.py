@@ -7,6 +7,8 @@
 # append new notes
 # save permanently in a file
 
+
+# path
 path = "E:\\Vidya Career\\IT JOB\\Repati Kosam\\rk_Projects\\Notes App\\file.txt"
 
 # add note
