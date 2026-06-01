@@ -121,6 +121,3 @@ def sorting(li):
     return li
 
 print(sorting(li))
-
-
-## Mini Project - Student Marks Analyzer
