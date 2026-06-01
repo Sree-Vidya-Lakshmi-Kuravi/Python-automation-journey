@@ -1,4 +1,4 @@
-## Calculator
+## Basic Calculator
 
 while True:
     print("================== WELCOME ==================")
