@@ -1,7 +1,6 @@
 # ## Find Maximum Number
 li = [1, 23, 34, 8, 23]
 
-
 def max_num(li):
     max_num = li[0]
 

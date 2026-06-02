@@ -114,6 +114,3 @@ def palindrome(num):
         print("Not a Palindrome")
 
 print(palindrome(num))
-
-
-

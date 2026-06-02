@@ -6,6 +6,7 @@ with open('E:\\Vidya Career\\IT JOB\\Repati Kosam\\Week 1\\Day 07 - File Handlin
     print(file.read())
 
 
+
 # readline() and readlines()
 
 with open('E:\\Vidya Career\\IT JOB\\Repati Kosam\\Week 1\\Day 07 - File Handling\\sample.txt') as file:

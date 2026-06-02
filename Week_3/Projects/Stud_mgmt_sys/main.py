@@ -2,7 +2,6 @@
 
 from student_manager import StudentManager
 
-
 path = 'data/students.txt'
 while True:
     stud_man = StudentManager(path)

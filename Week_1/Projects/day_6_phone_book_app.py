@@ -2,7 +2,6 @@
 ## Phone Book Application
 
 # Program should:
-
 # add contact
 # search contact
 # delete contact
