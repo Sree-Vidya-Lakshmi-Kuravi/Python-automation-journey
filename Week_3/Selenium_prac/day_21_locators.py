@@ -1,6 +1,6 @@
 
 from selenium import webdriver
-from selenium .webdriver.common.by import By
+from selenium.webdriver.common.by import By
 import time
 
 driver = webdriver.Chrome()
@@ -11,21 +11,28 @@ time.sleep(2)
 driver.get("https://the-internet.herokuapp.com/login?utm_source=chatgpt.com")
 
 
-driver.find_element(By.XPATH, '//*[@id="username"]').send_keys("tomsmith")
+username = driver.find_element(By.XPATH, '//*[@id="username"]').send_keys("tom")
 time.sleep(2)
 
 # clear - to clear the data
 driver.find_element(By.XPATH, '//*[@id="username"]').clear()
 time.sleep(2)
 
-driver.find_element(By.XPATH, '//*[@id="username"]').send_keys("tomsmith")
+username = driver.find_element(By.XPATH, '//*[@id="username"]').send_keys("tomsmith")
 time.sleep(2)
 
-driver.find_element(By.XPATH, '//*[@id="password"]').send_keys("SuperSecretPassword!")
+password = driver.find_element(By.XPATH, '//*[@id="password"]').send_keys("SuperSecretPassword!")
+
+
+# get_attribute() - to find the value based on the attribute
+password = driver.find_element(By.XPATH, '//*[@id="password"]')
+
+print(password.get_attribute("id"))  # id - attribute
+
 time.sleep(2)
 
 
-driver.find_element(By.XPATH, '//*[@id="login"]/button/i').click()
+driver.find_element(By.XPATH, '//*[@id="login"]/button').click()
 time.sleep(3)
 
 print(driver.title)
