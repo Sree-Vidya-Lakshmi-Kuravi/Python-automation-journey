@@ -14,6 +14,13 @@ driver.get("https://the-internet.herokuapp.com/login?utm_source=chatgpt.com")
 driver.find_element(By.XPATH, '//*[@id="username"]').send_keys("tomsmith")
 time.sleep(2)
 
+# clear - to clear the data
+driver.find_element(By.XPATH, '//*[@id="username"]').clear()
+time.sleep(2)
+
+driver.find_element(By.XPATH, '//*[@id="username"]').send_keys("tomsmith")
+time.sleep(2)
+
 driver.find_element(By.XPATH, '//*[@id="password"]').send_keys("SuperSecretPassword!")
 time.sleep(2)
 
