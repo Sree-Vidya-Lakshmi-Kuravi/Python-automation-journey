@@ -1,5 +1,4 @@
 ## JSON HANDLING
-
 import json
 
 data = [
@@ -55,7 +54,6 @@ def search_by_name(path, name):
             return i
 
 # print(search_by_name(path, "pradeep"))
-
 
 # converting dictionary to json
 def dict_to_json(path):
