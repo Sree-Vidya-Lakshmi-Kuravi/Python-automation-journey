@@ -27,7 +27,6 @@ class TaskManager:
     def add_task(self, title, description, priority, status = None):
 
         t = add_data(self.__data, title, description, priority, status)
-
         if t:
             self.__data.append(t)
 

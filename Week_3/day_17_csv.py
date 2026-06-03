@@ -3,7 +3,6 @@
 import os
 import csv
 
-
 path = 'day_17_sample.csv'
 # creating a csv file 
 def create_csv_w(path):
@@ -20,7 +19,6 @@ def create_csv_w(path):
     print("The csv file has been created successfully")
 
 # create_csv_r(path)
-
 
 headers = ['id','name','marks']
 def create_csv_dw(path):
