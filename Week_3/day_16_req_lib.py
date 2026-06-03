@@ -16,7 +16,6 @@ for d in data:
     print("Name:", d['name'])
     print("Email:", d['email'])
 
-
 # Fetching single user
 
 response = requests.get('https://jsonplaceholder.typicode.com/users/4')
