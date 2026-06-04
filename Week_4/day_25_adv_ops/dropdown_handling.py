@@ -8,7 +8,7 @@ from selenium.webdriver.support.ui import Select
 
 with webdriver.Chrome() as driver:
     driver.get("https://demoqa.com/select-menu")
-    wait = WebDriverWait(driver, 10)
+    wait = WebDriverWait(driver, 10) # For explicit wait
     driver.maximize_window()
 
     # Locating the dropdown

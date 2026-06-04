@@ -3,7 +3,6 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait  # explicit wait
 from selenium.webdriver.support import expected_conditions as EC  # expected conditions
-
 from selenium.webdriver.support.ui import Select
 
 with webdriver.Chrome() as driver:  # automatically closes o need of driver.quit()

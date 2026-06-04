@@ -6,7 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 with webdriver.Chrome() as driver:
     driver.get("https://the-internet.herokuapp.com/windows?utm_source=chatgpt.com")
 
-    wait = WebDriverWait(driver, 10)
+    wait = WebDriverWait(driver, 10)  # For explicit wait
     
     main = driver.current_window_handle
 
