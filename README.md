@@ -1,20 +1,20 @@
-# Python Automation Journey
+# 🐍 Python Automation Journey
 
-This repository documents my journey of learning Python and preparing for Automation using Python-based tools and frameworks.
+This repository documents my journey of learning **Python** and preparing for **Automation** using Python-based tools and frameworks.
 
-The goal of this repository is to build a strong foundation in:
-- Python programming
-- Problem solving
-- Object-Oriented Programming (OOP)
-- File handling
-- Automation concepts
-- Selenium with Python
-- Robot Framework
-- Automation framework development
+🎯 The goal of this repository is to build a strong foundation in:
+  - Python programming
+  - Problem solving
+  - Object-Oriented Programming (OOP)
+  - File handling
+  - Automation concepts
+  - Selenium with Python
+  - Robot Framework
+  - Automation framework development
 
 ------------------------------------------------------------------------------
 
-# Topics Covered
+# 💻 Topics Covered
 
 ## Python Basics
 - Variables
@@ -61,9 +61,14 @@ The goal of this repository is to build a strong foundation in:
 - Inheritance
 - Encapsulation
 
+## Selenium Framework
+- Browser Operations
+- Locators
+- Waits and Synchronization
+
 ------------------------------------------------------------------------------
 
-# Projects
+# 🚀 Projects
 
 ## 01 Student Management System
 Features:
@@ -79,7 +84,6 @@ Features:
 - OOPS
 
 
-
 ## 02 Expense Tracker
 Features:
 - Add expenses
@@ -93,3 +97,9 @@ Features:
 - Exception Handling
   
 
+## 03 Employee Management System
+Features:
+- Manage employees using CSV and JSON files
+- Add, update, search and delete employee records
+- Search employees by name or department
+- File handling
