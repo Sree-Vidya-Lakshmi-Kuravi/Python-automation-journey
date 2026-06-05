@@ -1,0 +1,46 @@
+Difference between Implicit and Explicit Waits.
+Implicit Wait:
+- Applies to all elements in the script.
+- Only waits for the element to exist in the DOM i.e., page's HTML structure.
+- Written only once in the beginning of the script.
+- It can lead to longer execution times if the DOM is heavy but the elements are not heavy.
+- Syntax: driver.implicitly_wait(seconds)
+
+Explicit Wait:
+- Applies to only specific element that is chosen.
+- Can wait for specific condition like clickable, visible etc.
+- Written individually for specific elements.
+- More efficient.
+- Syntax: WebDriverWait(driver, seconds).until(EC.condition)
+
+--------------------------------------------------------------------------------------------------------------------
+
+Why is time.sleep() bad?
+- time.sleep() works exactly for the given specific seconds.
+- If the element takes more time to load than time.sleep(), the code/test will crash. (Flakiness)
+- If the element takes less time to load, even though the time.sleep() waits for the time to complete so it leads to the waste of time.
+
+--------------------------------------------------------------------------------------------------------------------
+
+What is synchronization issue?
+- In automation testing, a synchronization issue happens when  automation script and web browser get out of sync.
+- It is the clash between the spped of code and speed of web application.
+- Python script executes commands at high speed but web browser depends on network, javascript rendering, database queries.
+- Causes:
+ -- Element is missing entirely (NoSuchElementException)
+ -- Element exists, but it is not ready (ElementNotInteractableException)
+ -- Element was there but late loading image pushed it down the page.
+
+--------------------------------------------------------------------------------------------------------------------
+
+ Exceptions due to waits?
+ - TimeOutException: 
+   -- Thrown by Explicit waits.
+   --  Page took longer to load than your timout threshold or the element never actually appeared or changed state.
+ - NoSuchElementException:
+   -- Thrown by Implicit Waits.
+   -- Occurred when the element truly doesn't exist, the locator (XPath/ID) is wrong, or your implicit wait time was too short for a slow-loading page.
+ - ElementNotInteractableException / ElementClickInterceptedException:
+   -- These occur when an element is technically present in the DOM (meaning an Implicit Wait is satisfied), but it isn't in a state where a user can interact with it.
+ - StaleElementReferenceException:
+   -- This happens when an element you previously found is no longer attached to the page's DOM.

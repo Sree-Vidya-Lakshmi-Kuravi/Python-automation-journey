@@ -6,6 +6,11 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import Select
 
+import os
+
+ss_folder = "screenshots"
+os.makedirs(ss_folder, exist_ok=True) # check if folder exists
+
 with webdriver.Chrome() as driver:
     driver.get("https://demoqa.com/select-menu")
     wait = WebDriverWait(driver, 10) # For explicit wait
@@ -35,12 +40,14 @@ with webdriver.Chrome() as driver:
 
     #### ---- SELECTING MULTIPLE OPTIONS IN DROPDOWN ----
 
-    mul_sel = wait.until(EC.visibility_of_element_located((By.ID, "cars")))
-    Select(mul_sel.select_by_value("volvo"))
-    Select(mul_sel.select_by_value("audi"))
+    # mul_sel = wait.until(EC.visibility_of_element_located((By.ID, "cars")))
+    # Select(mul_sel.select_by_value("volvo"))
+    # Select(mul_sel.select_by_value("audi"))
 
-    sel_options = Select(mul_sel).all_selected_options
-    for option in sel_options:
-        print(f"Selected: {option.text}")
+    # sel_options = Select(mul_sel).all_selected_options
+    # for option in sel_options:
+    #     print(f"Selected: {option.text}")
 
-    driver.implicitly_wait(6)
+    driver.implicitly_wait(2)
+
+    driver.save_screenshot(f"{ss_folder}/dropdown_handling.png")

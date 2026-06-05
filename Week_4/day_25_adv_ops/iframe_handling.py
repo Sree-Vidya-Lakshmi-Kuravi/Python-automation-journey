@@ -5,6 +5,11 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import Select
 import time
 
+import os
+
+ss_folder = "screenshots"
+os.makedirs(ss_folder, exist_ok=True) # check if folder exists
+
 with webdriver.Chrome() as driver:
     
     ## IFRAME HANDLING
@@ -30,19 +35,46 @@ with webdriver.Chrome() as driver:
     texting.send_keys("La la la la")
     driver.implicitly_wait(2)
 
+    driver.save_screenshot(f"{ss_folder}/iframe_handling_1.png")
+
     driver.switch_to.default_content()  # comes back to the page from iframe content page
 
-    i_within = wait.until(EC.element_to_be_clickable((By.XPATH, "/html/body/section/div[1]/div/div/div/div[1]/div/ul/li[2]/a"))).click()
+    wait.until(EC.element_to_be_clickable((By.XPATH, '/html/body/section/div[1]/div/div/div/div[1]/div/ul/li[2]/a'))).click()
+
     time.sleep(2)
-    
-    outer = wait.until(EC.visibility_of_element_located((By.XPATH, "/html/body/section/div/div/iframe")))
-    driver.switch_to.frame(outer)
 
-    inner = wait.until(EC.visibility_of_element_located((By.XPATH, '/html/body/section/div')))
-    driver.switch_to.frame(inner)
-    
-    wait.until(EC.visibility_of_element_located((By.XPATH, "/html/body/section/div/div/div/input"))).send_keys("Hii raa ")
+    outer_frame = wait.until(EC.visibility_of_element_located((By.XPATH, '//*[@id="Multiple"]/iframe')))
 
-    time.sleep(3)
+    driver.switch_to.frame(outer_frame)
+
+    of_text = wait.until(EC.visibility_of_element_located((By.XPATH, '/html/body/section/div/div/h5')))
+
+    print(of_text.text)
+
+    inner_frame = wait.until(EC.visibility_of_element_located((By.XPATH, '/html/body/section/div/div/iframe')))
+
+    driver.switch_to.frame(inner_frame)
+
+    if_text = wait.until(EC.visibility_of_element_located((By.XPATH, '/html/body/section/div/h5')))
+
+    print(if_text.text)
+
+    wait.until(EC.visibility_of_element_located((By.XPATH, '/html/body/section/div/div/div/input'))).send_keys("Namaste!!!")
+
+    driver.save_screenshot(f"{ss_folder}/iframe_handling_2.png")
+
+    time.sleep(1)
+
+    driver.switch_to.parent_frame()
+
+    f11_text = wait.until(EC.visibility_of_element_located((By.XPATH, '/html/body/section/div/div/h5')))
+
+    print(f11_text.text)
+
+    driver.switch_to.default_content()
+
+    main_text = wait.until(EC.visibility_of_element_located((By.XPATH, '//*[@id="header"]/div/div/div/div[2]/h1')))
+
+    print(main_text.text)
 
     
