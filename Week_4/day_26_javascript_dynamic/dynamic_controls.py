@@ -86,6 +86,8 @@ with webdriver.Chrome() as driver:
     ph.send_keys("899898998989")
     time.sleep(2)
 
+    driver.save_screenshot('./screenshots/dynamic_controls.png')
+
     driver.execute_script("window.scrollTo(0, 1000);")
     time.sleep(2)
 
