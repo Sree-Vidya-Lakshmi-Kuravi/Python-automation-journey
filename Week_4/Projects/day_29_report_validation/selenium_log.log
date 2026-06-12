@@ -1,0 +1,96 @@
+2026-06-12 14:12:50,272 - INFO - Browser launched successfully
+2026-06-12 14:17:53,269 - INFO - Browser launched
+2026-06-12 14:24:29,614 - INFO - Browser launched
+2026-06-12 14:24:34,670 - INFO - Submitted the data
+2026-06-12 14:26:20,037 - INFO - Browser launched
+2026-06-12 14:26:25,024 - INFO - Submitted the data
+2026-06-12 14:26:27,101 - INFO - Something went wrong
+2026-06-12 14:29:50,589 - INFO - Browser launched
+2026-06-12 14:29:55,603 - INFO - Submitted the data
+2026-06-12 14:29:57,685 - INFO - Something went wrong
+2026-06-12 14:30:38,337 - INFO - Browser launched
+2026-06-12 14:30:43,268 - INFO - Submitted the data
+2026-06-12 14:30:45,328 - INFO - Something went wrong
+2026-06-12 14:31:19,529 - INFO - Browser launched
+2026-06-12 14:31:24,519 - INFO - Submitted the data
+2026-06-12 14:31:26,607 - INFO - Something went wrong
+2026-06-12 14:40:09,697 - DEBUG - Selenium Manager binary found at: E:\Vidya Career\IT JOB\Repati Kosam\rkvenv\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe
+2026-06-12 14:40:09,697 - DEBUG - Executing process: E:\Vidya Career\IT JOB\Repati Kosam\rkvenv\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --debug --language-binding python --output json
+2026-06-12 14:40:09,837 - DEBUG - chromedriver not found in PATH
+2026-06-12 14:40:09,837 - DEBUG - chrome detected at C:\Program Files\Google\Chrome\Application\chrome.exe
+2026-06-12 14:40:09,838 - DEBUG - Detected browser: chrome 149.0.7827.103
+2026-06-12 14:40:09,838 - DEBUG - Required driver: chromedriver 149.0.7827.115
+2026-06-12 14:40:09,838 - DEBUG - chromedriver 149.0.7827.115 already in the cache
+2026-06-12 14:40:09,838 - DEBUG - Driver path: C:\Users\vidya\.cache\selenium\chromedriver\win64\149.0.7827.115\chromedriver.exe
+2026-06-12 14:40:09,839 - DEBUG - Browser path: C:\Program Files\Google\Chrome\Application\chrome.exe
+2026-06-12 14:40:09,849 - DEBUG - Started executable: `C:\Users\vidya\.cache\selenium\chromedriver\win64\149.0.7827.115\chromedriver.exe` in a child process with pid: 25020 using 0 to output -3
+2026-06-12 14:40:09,935 - DEBUG - POST http://localhost:55308/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'browserVersion': None, 'goog:chromeOptions': {'extensions': [], 'binary': 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', 'args': []}}}}
+2026-06-12 14:40:09,936 - DEBUG - Starting new HTTP connection (1): localhost:55308
+2026-06-12 14:40:10,700 - DEBUG - http://localhost:55308 "POST /session HTTP/1.1" 200 0
+2026-06-12 14:40:10,701 - DEBUG - Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"149.0.7827.103","chrome":{"chromedriverVersion":"149.0.7827.115 (daf70f9ddee4b45d4f8870f574fbde61c0db4ca7-refs/branch-heads/7827_102@{#40})","userDataDir":"C:\\Users\\vidya\\AppData\\Local\\Temp\\scoped_dir25020_422370996"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:55311"},"goog:processID":24128,"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"58d50b2b41a39fc0c9f8c61c96ff5d80"}} | headers=HTTPHeaderDict({'Content-Length': '908', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-06-12 14:40:10,701 - DEBUG - Finished Request
+2026-06-12 14:40:10,701 - DEBUG - POST http://localhost:55308/session/58d50b2b41a39fc0c9f8c61c96ff5d80/url {'url': 'https://the-internet.herokuapp.com/login?utm_source=chatgpt.com'}
+2026-06-12 14:40:14,326 - DEBUG - http://localhost:55308 "POST /session/58d50b2b41a39fc0c9f8c61c96ff5d80/url HTTP/1.1" 200 0
+2026-06-12 14:40:14,326 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-06-12 14:40:14,327 - DEBUG - Finished Request
+2026-06-12 14:40:14,327 - INFO - Browser launched
+2026-06-12 14:40:14,328 - DEBUG - POST http://localhost:55308/session/58d50b2b41a39fc0c9f8c61c96ff5d80/element {'using': 'css selector', 'value': '[id="username"]'}
+2026-06-12 14:40:14,348 - DEBUG - http://localhost:55308 "POST /session/58d50b2b41a39fc0c9f8c61c96ff5d80/element HTTP/1.1" 200 0
+2026-06-12 14:40:14,348 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.D365A3F6B5F2CB2CD268B13C6449FD6C.d.1E9A499166D298E204CA241547D890DF.e.4"}} | headers=HTTPHeaderDict({'Content-Length': '125', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-06-12 14:40:14,349 - DEBUG - Finished Request
+2026-06-12 14:40:14,351 - DEBUG - POST http://localhost:55308/session/58d50b2b41a39fc0c9f8c61c96ff5d80/execute/sync {'script': '/* isDisplayed */return ((function () {\n    var tagNameDescriptor = Object.getOwnPropertyDescriptor(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.D365A3F6B5F2CB2CD268B13C6449FD6C.d.1E9A499166D298E204CA241547D890DF.e.4'}]}
+2026-06-12 14:40:14,366 - DEBUG - http://localhost:55308 "POST /session/58d50b2b41a39fc0c9f8c61c96ff5d80/execute/sync HTTP/1.1" 200 0
+2026-06-12 14:40:14,366 - DEBUG - Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-06-12 14:40:14,366 - DEBUG - Finished Request
+2026-06-12 14:40:14,367 - DEBUG - POST http://localhost:55308/session/58d50b2b41a39fc0c9f8c61c96ff5d80/element/f.D365A3F6B5F2CB2CD268B13C6449FD6C.d.1E9A499166D298E204CA241547D890DF.e.4/value {'text': 'tomsmith', 'value': ['t', 'o', 'm', 's', 'm', 'i', 't', 'h']}
+2026-06-12 14:40:14,472 - DEBUG - http://localhost:55308 "POST /session/58d50b2b41a39fc0c9f8c61c96ff5d80/element/f.D365A3F6B5F2CB2CD268B13C6449FD6C.d.1E9A499166D298E204CA241547D890DF.e.4/value HTTP/1.1" 200 0
+2026-06-12 14:40:14,473 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-06-12 14:40:14,473 - DEBUG - Finished Request
+2026-06-12 14:40:14,474 - DEBUG - Username entered successfully
+2026-06-12 14:40:16,475 - DEBUG - POST http://localhost:55308/session/58d50b2b41a39fc0c9f8c61c96ff5d80/element {'using': 'css selector', 'value': '[id="password"]'}
+2026-06-12 14:40:16,496 - DEBUG - http://localhost:55308 "POST /session/58d50b2b41a39fc0c9f8c61c96ff5d80/element HTTP/1.1" 200 0
+2026-06-12 14:40:16,497 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.D365A3F6B5F2CB2CD268B13C6449FD6C.d.1E9A499166D298E204CA241547D890DF.e.5"}} | headers=HTTPHeaderDict({'Content-Length': '125', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-06-12 14:40:16,497 - DEBUG - Finished Request
+2026-06-12 14:40:16,499 - DEBUG - POST http://localhost:55308/session/58d50b2b41a39fc0c9f8c61c96ff5d80/execute/sync {'script': '/* isDisplayed */return ((function () {\n    var tagNameDescriptor = Object.getOwnPropertyDescriptor(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.D365A3F6B5F2CB2CD268B13C6449FD6C.d.1E9A499166D298E204CA241547D890DF.e.5'}]}
+2026-06-12 14:40:16,512 - DEBUG - http://localhost:55308 "POST /session/58d50b2b41a39fc0c9f8c61c96ff5d80/execute/sync HTTP/1.1" 200 0
+2026-06-12 14:40:16,512 - DEBUG - Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-06-12 14:40:16,513 - DEBUG - Finished Request
+2026-06-12 14:40:16,513 - DEBUG - POST http://localhost:55308/session/58d50b2b41a39fc0c9f8c61c96ff5d80/element/f.D365A3F6B5F2CB2CD268B13C6449FD6C.d.1E9A499166D298E204CA241547D890DF.e.5/value {'text': 'SuperSecretPassword!', 'value': ['S', 'u', 'p', 'e', 'r', 'S', 'e', 'c', 'r', 'e', 't', 'P', 'a', 's', 's', 'w', 'o', 'r', 'd', '!']}
+2026-06-12 14:40:16,608 - DEBUG - http://localhost:55308 "POST /session/58d50b2b41a39fc0c9f8c61c96ff5d80/element/f.D365A3F6B5F2CB2CD268B13C6449FD6C.d.1E9A499166D298E204CA241547D890DF.e.5/value HTTP/1.1" 200 0
+2026-06-12 14:40:16,609 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-06-12 14:40:16,609 - DEBUG - Finished Request
+2026-06-12 14:40:16,610 - DEBUG - Entered password
+2026-06-12 14:40:18,611 - DEBUG - POST http://localhost:55308/session/58d50b2b41a39fc0c9f8c61c96ff5d80/element {'using': 'css selector', 'value': '#login > button'}
+2026-06-12 14:40:18,625 - DEBUG - http://localhost:55308 "POST /session/58d50b2b41a39fc0c9f8c61c96ff5d80/element HTTP/1.1" 200 0
+2026-06-12 14:40:18,625 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.D365A3F6B5F2CB2CD268B13C6449FD6C.d.1E9A499166D298E204CA241547D890DF.e.6"}} | headers=HTTPHeaderDict({'Content-Length': '125', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-06-12 14:40:18,626 - DEBUG - Finished Request
+2026-06-12 14:40:18,627 - DEBUG - POST http://localhost:55308/session/58d50b2b41a39fc0c9f8c61c96ff5d80/execute/sync {'script': '/* isDisplayed */return ((function () {\n    var tagNameDescriptor = Object.getOwnPropertyDescriptor(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.D365A3F6B5F2CB2CD268B13C6449FD6C.d.1E9A499166D298E204CA241547D890DF.e.6'}]}
+2026-06-12 14:40:18,639 - DEBUG - http://localhost:55308 "POST /session/58d50b2b41a39fc0c9f8c61c96ff5d80/execute/sync HTTP/1.1" 200 0
+2026-06-12 14:40:18,640 - DEBUG - Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-06-12 14:40:18,640 - DEBUG - Finished Request
+2026-06-12 14:40:18,641 - DEBUG - GET http://localhost:55308/session/58d50b2b41a39fc0c9f8c61c96ff5d80/element/f.D365A3F6B5F2CB2CD268B13C6449FD6C.d.1E9A499166D298E204CA241547D890DF.e.6/enabled {}
+2026-06-12 14:40:18,652 - DEBUG - http://localhost:55308 "GET /session/58d50b2b41a39fc0c9f8c61c96ff5d80/element/f.D365A3F6B5F2CB2CD268B13C6449FD6C.d.1E9A499166D298E204CA241547D890DF.e.6/enabled HTTP/1.1" 200 0
+2026-06-12 14:40:18,653 - DEBUG - Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-06-12 14:40:18,653 - DEBUG - Finished Request
+2026-06-12 14:40:18,654 - DEBUG - POST http://localhost:55308/session/58d50b2b41a39fc0c9f8c61c96ff5d80/element/f.D365A3F6B5F2CB2CD268B13C6449FD6C.d.1E9A499166D298E204CA241547D890DF.e.6/click {}
+2026-06-12 14:40:19,334 - DEBUG - http://localhost:55308 "POST /session/58d50b2b41a39fc0c9f8c61c96ff5d80/element/f.D365A3F6B5F2CB2CD268B13C6449FD6C.d.1E9A499166D298E204CA241547D890DF.e.6/click HTTP/1.1" 200 0
+2026-06-12 14:40:19,335 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-06-12 14:40:19,335 - DEBUG - Finished Request
+2026-06-12 14:40:19,335 - INFO - Submitted the data
+2026-06-12 14:40:21,336 - DEBUG - POST http://localhost:55308/session/58d50b2b41a39fc0c9f8c61c96ff5d80/element {'using': 'css selector', 'value': '[id="flash"]'}
+2026-06-12 14:40:21,368 - DEBUG - http://localhost:55308 "POST /session/58d50b2b41a39fc0c9f8c61c96ff5d80/element HTTP/1.1" 200 0
+2026-06-12 14:40:21,368 - DEBUG - Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.D365A3F6B5F2CB2CD268B13C6449FD6C.d.34F4D3B192D753FC6D1C31C2E45FC95F.e.43"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-06-12 14:40:21,369 - DEBUG - Finished Request
+2026-06-12 14:40:21,369 - DEBUG - POST http://localhost:55308/session/58d50b2b41a39fc0c9f8c61c96ff5d80/execute/sync {'script': '/* isDisplayed */return ((function () {\n    var tagNameDescriptor = Object.getOwnPropertyDescriptor(...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.D365A3F6B5F2CB2CD268B13C6449FD6C.d.34F4D3B192D753FC6D1C31C2E45FC95F.e.43'}]}
+2026-06-12 14:40:21,379 - DEBUG - http://localhost:55308 "POST /session/58d50b2b41a39fc0c9f8c61c96ff5d80/execute/sync HTTP/1.1" 200 0
+2026-06-12 14:40:21,380 - DEBUG - Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-06-12 14:40:21,380 - DEBUG - Finished Request
+2026-06-12 14:40:21,381 - DEBUG - GET http://localhost:55308/session/58d50b2b41a39fc0c9f8c61c96ff5d80/element/f.D365A3F6B5F2CB2CD268B13C6449FD6C.d.34F4D3B192D753FC6D1C31C2E45FC95F.e.43/text {}
+2026-06-12 14:40:21,399 - DEBUG - http://localhost:55308 "GET /session/58d50b2b41a39fc0c9f8c61c96ff5d80/element/f.D365A3F6B5F2CB2CD268B13C6449FD6C.d.34F4D3B192D753FC6D1C31C2E45FC95F.e.43/text HTTP/1.1" 200 0
+2026-06-12 14:40:21,400 - DEBUG - Remote response: status=200 | data={"value":"You logged into a secure area!\n×"} | headers=HTTPHeaderDict({'Content-Length': '46', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-06-12 14:40:21,400 - DEBUG - Finished Request
+2026-06-12 14:40:21,401 - DEBUG - DELETE http://localhost:55308/session/58d50b2b41a39fc0c9f8c61c96ff5d80 {}
+2026-06-12 14:40:21,549 - DEBUG - http://localhost:55308 "DELETE /session/58d50b2b41a39fc0c9f8c61c96ff5d80 HTTP/1.1" 200 0
+2026-06-12 14:40:21,550 - DEBUG - Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2026-06-12 14:40:21,550 - DEBUG - Finished Request
+2026-06-12 14:40:23,764 - ERROR - Test failure occurred due to: name 'output_text' is not defined
