@@ -52,7 +52,7 @@ try:
 
         print("Output:", output.text)
 
-        result = validate_msg(output_text)
+        result = validate_msg(output.text)
 
         if result == "failed":
             logging.info("Login failed")
@@ -60,7 +60,7 @@ try:
 
         elif result == "success":
             logging.info("Login success")
-            driver.save_screenshot('.screenshots/login_success.png')
+            driver.save_screenshot('./screenshots/login_success.png')
 
         else:
             logging.warning("Something went wrong")
