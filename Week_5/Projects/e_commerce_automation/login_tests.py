@@ -13,15 +13,12 @@ with webdriver.Chrome() as driver:
     def positive_login(uname, pwd):
         username = wait.until(EC.visibility_of_element_located((By.ID, "user-name")))
         username.send_keys(uname)
-        driver.implicitly_wait(3)
 
         password = wait.until(EC.visibility_of_element_located((By.ID, "password")))
         password.send_keys(pwd)
-        driver.implicitly_wait(3)
 
         login_btn = wait.until(EC.element_to_be_clickable((By.ID, "login-button")))
         login_btn.click()
-        driver.implicitly_wait(3)
 
         driver.save_screenshot('./screenshots/positive_login.png')
 
@@ -30,29 +27,21 @@ with webdriver.Chrome() as driver:
     def login_success_verify(uname, pwd, url):
         unames = ['standard_user', 'locked_out_user', 'problem_user', 'performance_glitch_user', 'error_user', 'visual_user']
 
-        if uname in unames and pwd == 'secret_sauce':
-            print("Your username and password are correct")
-            if driver.current_url == url:
-                print("Login Success")
-            else:
-                print("Login failed")
-        else:
-            print("Your username or password is wrong")
+        assert uname in unames and pwd == 'secret_sauce', "Your username and password are correct"
+
+        assert driver.current_url == url, f"Expected {url}, but got this {driver.current_url}"
 
     # login_success_verify("standard_user", "secret_sauce", "https://www.saucedemo.com/inventory.html")
 
     def negative_login(uname, pwd):
         username = wait.until(EC.visibility_of_element_located((By.ID, "user-name")))
         username.send_keys(uname)
-        driver.implicitly_wait(3)
 
         password = wait.until(EC.visibility_of_element_located((By.ID, "password")))
         password.send_keys(pwd)
-        driver.implicitly_wait(3)
 
         login_btn = wait.until(EC.element_to_be_clickable((By.ID, "login-button")))
         login_btn.click()
-        driver.implicitly_wait(3)
 
         driver.save_screenshot('./screenshots/negative_login.png')
 
@@ -69,10 +58,7 @@ with webdriver.Chrome() as driver:
     # print(msg.text)
 
     def neg_login_verify(expected, actual):
-        if expected == actual:
-            print("Login Failed Message has been displayed correctly")
-        else:
-            print("Something went wrong with the Login Failed Message")
+        assert expected == actual, f"Expected Message {expected} Actual Message {actual}"
     
     # neg_login_verify(msg, actual)
 
@@ -91,10 +77,7 @@ with webdriver.Chrome() as driver:
     logout()
 
     def logout_validate(url):
-        if driver.current_url == url:
-            print("Logout successful. Redirected to login page")
-        else:
-            print("Not logged out successfully")
+        assert driver.current_url == url, "Logout successful. Redirected to login page"
     
     url = 'https://www.saucedemo.com/'
     logout_validate(url)
