@@ -67,8 +67,9 @@ def logout():
                 print("Unable to logout. Try again")
         else:
             print("Unable to logout. Try again")
+# logout()
 
-logout()
+# ---------------------------------------------------------------------------
 
 
 # with webdriver.Chrome() as driver:
