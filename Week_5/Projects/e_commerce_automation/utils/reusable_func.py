@@ -4,15 +4,23 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import os
 
-wait = WebDriverWait(driver, 10)
+DEFAULT_TIMEOUT = 10  # time in seconds for waits
+wait = WebDriverWait(driver, DEFAULT_TIMEOUT)
 
-def wait_for_visibility(driver, locator):
-   wait.until(EC.visibility_of_element_located((By.locator)))
+# checks whether element is visible
+def wait_for_visibility(driver, element):
+   wait.until(EC.visibility_of_element_located((element)))
 
-def wait_for_clickable(driver, locator):
-    e = wait.until(EC.element_to_be_clickable((By.locator)))
-    e.click()
+# checks whether element is clickable
+def wait_for_clickable(driver, element):
+    e = wait.until(EC.element_to_be_clickable((element)))
 
+# checks whether element is present only in HTML structure
+def wait_for_presence(driver, element):
+    e = wait.until(EC.presence_of_element_located((element)))
+
+
+# Function for screenshot
 def take_screenshot(driver, filename):
     i = 1
     while True:
@@ -21,6 +29,26 @@ def take_screenshot(driver, filename):
             print("Screenshot has been saved successfully")
             break
         i += 1
+
+
+# validating the url
+def validate_url(actual, expected):
+    if expected not in actual:
+        print(f"'{expected}' is not present in url '{actual}'")
+        return False
+    else:
+        print(f"'{expected}' is present in url '{actual}'")
+        return True
+
+
+# validate text
+def validate_text(actual, expected):
+    if expected in actual:
+        print(f"Text has been matched successfully.\n Actual text: {actual}\n Expected Text: {expected}")
+        return True
+    else:
+        print(f"Text has not matched successfully.\n Actual text: {actual}\n Expected Text: {expected}")
+        return True
 
 
 
