@@ -25,36 +25,3 @@ def wait_for_presence(driver, element, t = DEFAULT_TIMEOUT):
 def wait_for_visibility_all(driver, element, t = DEFAULT_TIMEOUT):
     wait = WebDriverWait(driver, t)
     return wait.until(EC.visibility_of_all_elements_located((element)))
-    
-# Function for screenshot
-def take_screenshot(driver, filename):
-    i = 1
-    while True:
-        if not os.path.isfile(f'./screenshots/{filename}{i}.png'):
-            driver.save_screenshot(f'./screenshots/{filename}{i}.png')
-            print("Screenshot has been saved successfully")
-            break
-        i += 1
-
-
-# validating the url
-def validate_url(actual, expected):
-    if expected not in actual:
-        print(f"'{expected}' is not present in url '{actual}'")
-        return False
-    else:
-        print(f"'{expected}' is present in url '{actual}'")
-        return True
-
-
-# validate text
-def validate_text(actual, expected):
-    if expected in actual:
-        print(f"Text has been matched successfully.\n Actual text: {actual}\n Expected Text: {expected}")
-        return True
-    else:
-        print(f"Text has not matched successfully.\n Actual text: {actual}\n Expected Text: {expected}")
-        return True
-
-
-
