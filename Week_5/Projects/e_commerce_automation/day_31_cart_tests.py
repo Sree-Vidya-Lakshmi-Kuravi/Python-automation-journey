@@ -124,7 +124,7 @@ with webdriver.Chrome() as driver:
         product_to_remove(driver, (By.ID, "item_1_title_link"), (By.ID, "remove-sauce-labs-bolt-t-shirt"))
         time.sleep(2)
 
-        # Check cart status
+        # -- Check cart status
         count = get_cart_count(driver)
         if count == 0:
             print("No items in the cart")
