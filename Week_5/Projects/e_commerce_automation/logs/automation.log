@@ -1,0 +1,41 @@
+2026-06-23 16:28:42,715 - INFO - User has been logged in successfully
+2026-06-23 16:29:09,029 - INFO - User has been logged in successfully
+2026-06-23 16:30:29,568 - INFO - User has been logged in successfully
+2026-06-23 16:30:54,499 - INFO - User has been logged in successfully
+2026-06-23 16:31:10,605 - INFO - User has been logged in successfully
+2026-06-23 16:34:12,612 - ERROR - User has not logged in successfully Login failed
+2026-06-23 16:34:30,487 - ERROR - User has not logged in successfully Login failed
+2026-06-23 16:34:57,403 - ERROR - User has not logged in successfully Login sucess
+2026-06-23 16:35:19,869 - INFO - User has been logged in successfully
+2026-06-23 16:35:35,573 - INFO - User has been logged in successfully
+2026-06-23 16:54:07,341 - INFO - User has been logged in successfully
+2026-06-23 16:54:07,396 - INFO - Products have been validated successfully
+2026-06-23 16:55:41,521 - INFO - User has been logged in successfully
+2026-06-23 16:55:41,603 - INFO - Products have been validated successfully
+2026-06-23 17:00:16,301 - INFO - User has been logged in successfully
+2026-06-23 17:00:16,380 - INFO - Products have been validated successfully
+2026-06-23 17:03:23,503 - INFO - User has been logged in successfully
+2026-06-23 17:03:23,575 - INFO - Products have been validated successfully
+2026-06-23 17:03:23,834 - INFO - Products have been added into cart successfully
+2026-06-23 17:03:24,008 - INFO - Cart has been validated successfully
+2026-06-23 17:05:43,025 - INFO - User has been logged in successfully
+2026-06-23 17:05:43,093 - INFO - Products have been validated successfully
+2026-06-23 17:05:43,325 - INFO - Products have been added into cart successfully
+2026-06-23 17:05:43,510 - INFO - Cart has been validated successfully
+2026-06-23 17:07:36,601 - INFO - User has been logged in successfully
+2026-06-23 17:07:36,674 - INFO - Products have been validated successfully
+2026-06-23 17:07:36,916 - INFO - Products have been added into cart successfully
+2026-06-23 17:07:37,097 - INFO - Cart has been validated successfully
+2026-06-23 17:10:40,714 - INFO - User has been logged in successfully
+2026-06-23 17:10:40,808 - INFO - Products have been validated successfully
+2026-06-23 17:10:41,057 - INFO - Products have been added into cart successfully
+2026-06-23 17:10:41,179 - INFO - Cart has been validated successfully
+2026-06-23 17:10:41,652 - INFO - Checkout process has been started
+2026-06-23 17:10:41,810 - INFO - Order has been placed successfully
+2026-06-23 17:11:42,992 - INFO - User has been logged in successfully
+2026-06-23 17:11:43,081 - INFO - Products have been validated successfully
+2026-06-23 17:11:43,304 - INFO - Products have been added into cart successfully
+2026-06-23 17:11:43,442 - INFO - Cart has been validated successfully
+2026-06-23 17:11:44,034 - INFO - Checkout process has been started
+2026-06-23 17:11:44,251 - INFO - Order has been placed successfully
+2026-06-23 17:11:45,055 - INFO - Logout successful
