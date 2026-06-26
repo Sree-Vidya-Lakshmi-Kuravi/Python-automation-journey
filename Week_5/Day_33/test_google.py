@@ -10,7 +10,7 @@ def test_google():
     assert "Google" in driver.title, "Google not found in the title"
     print("Google is present in title")
     driver.quit()
-# test_google()
+
 
 def test_saucedemo_login():
     driver = webdriver.Chrome()
@@ -23,7 +23,6 @@ def test_saucedemo_login():
     assert "inventory" in driver.current_url, "Unable to login"
     print("Login success")
 
-# test_saucedemo_login()
 
 
 def test_invalid_login():
@@ -40,7 +39,6 @@ def test_invalid_login():
     assert "do not match" in msg.text, "Login success"
     print("Invalid credentials")
 
-# test_invalid_login()
 
 
 def test_product_count():
@@ -56,7 +54,6 @@ def test_product_count():
     assert len(products) == 6, f"Expected 6 products, found {len(products)}"
     print(f"The total length of products: {len(products)}")
 
-# test_product_count()
 
 
 # To run these functions all at a time => pytest
