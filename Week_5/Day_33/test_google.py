@@ -2,6 +2,8 @@
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 
 def test_google():
@@ -23,6 +25,7 @@ def test_saucedemo_login():
     assert "inventory" in driver.current_url, "Unable to login"
     print("Login success")
 
+    driver.quit()
 
 
 def test_invalid_login():
@@ -39,7 +42,7 @@ def test_invalid_login():
     assert "do not match" in msg.text, "Login success"
     print("Invalid credentials")
 
-
+    driver.quit()
 
 def test_product_count():
     driver = webdriver.Chrome()
@@ -53,6 +56,42 @@ def test_product_count():
 
     assert len(products) == 6, f"Expected 6 products, found {len(products)}"
     print(f"The total length of products: {len(products)}")
+
+    driver.quit()
+
+def test_product_exists():
+    driver = webdriver.Chrome()
+    driver.get("https://www.saucedemo.com")
+
+    driver.find_element(By.ID, "user-name").send_keys("standard_user")
+    driver.find_element(By.ID, "password").send_keys("secret_sauce")
+    driver.find_element(By.ID, "login-button").click()
+
+    product_list = driver.find_elements(By.CLASS_NAME, "inventory_item_name")  
+    product_names = [p.text for p in product_list]  
+
+    assert "Sauce Labs Backpack" in product_names, "No such product found"
+    print("Sauce Labs Backpack found")
+
+    driver.quit()
+
+
+def test_logout():
+    with webdriver.Chrome() as driver:
+    
+        driver.get("https://www.saucedemo.com")
+
+        driver.find_element(By.ID, "user-name").send_keys("standard_user")
+        driver.find_element(By.ID, "password").send_keys("secret_sauce")
+        driver.find_element(By.ID, "login-button").click()
+
+        more_opt = driver.find_element(By.ID, "react-burger-menu-btn")
+        more_opt.click()
+
+        logout_btn = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.ID, "logout_sidebar_link")))
+        logout_btn.click()
+
+        print("Logout successful")
 
 
 
