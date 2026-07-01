@@ -18,5 +18,13 @@ def login_fixture(browser_fixture, username):
     browser_fixture.find_element(By.ID, "user-name").send_keys(username)
     browser_fixture.find_element(By.ID, "password").send_keys("secret_sauce")
     browser_fixture.find_element(By.ID, "login-button").click()
-
     return browser_fixture
+
+
+@pytest.fixture
+def login_fixture_for_all(browser_fixture):
+    browser_fixture.get("https://www.saucedemo.com/")
+    browser_fixture.find_element(By.ID, "user-name").send_keys("standard_user")
+    browser_fixture.find_element(By.ID, "password").send_keys("secret_sauce")
+    browser_fixture.find_element(By.ID, "login-button").click()
+    return browser_fixture    
