@@ -16,7 +16,7 @@ def test_checkout(login_fixture_for_all):
     assert "cart.html" in login_fixture_for_all.current_url, "Wrong page"
     print("Cart page displayed")
 
-    # checkout
+    # checkout page
     login_fixture_for_all.find_element(By.ID, "checkout").click()
     assert "checkout-step-one" in login_fixture_for_all.current_url, "Checkout page not displayed"
     print("Checkout page displayed")
@@ -32,7 +32,7 @@ def test_checkout(login_fixture_for_all):
     assert 'checkout-step-two' in login_fixture_for_all.current_url, "Not loaded second page"
     print("User details entered correctly for checkout")
 
-    # # finish
-    # login_fixture_for_all.find_element(By.ID, "finish").click()
-    # verify_text = login_fixture_for_all.find_element(By.CSS_SELECTOR, "#checkout_complete_container > h2")
-    # print(verify_text.text)
+    # finish
+    login_fixture_for_all.find_element(By.ID, "finish").click()
+    verify_text = login_fixture_for_all.find_element(By.CSS_SELECTOR, "#checkout_complete_container > h2")
+    print(verify_text.text)
