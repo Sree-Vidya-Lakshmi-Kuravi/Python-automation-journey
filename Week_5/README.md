@@ -111,3 +111,11 @@ Day_35/
 - Parameterize the invalid login
 - Parameterize the product validation
 - Use smoke and regression
+
+
+
+
+# 3️⃣6️⃣ Day - 36
+## Pytest Assertions
+
+### Topics Covered
