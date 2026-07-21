@@ -15,7 +15,7 @@ class BasePage:
     def click(self, locator):
         """Waits for element until clicked and clicks it"""
         ele = self.wait.wait_for_clickable(locator)
-        return ele
+        ele.click()
 
     def type_text(self, locator, text):
         """Waits for input field, clears the text, enters the input"""
