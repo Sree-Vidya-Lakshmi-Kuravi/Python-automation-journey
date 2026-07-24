@@ -5,13 +5,13 @@ from config.config_reader import ConfigReader
 
 @pytest.mark.smoke
 @pytest.mark.regression
-def cart_test(browser_fixture):
+def test_cart(browser_fixture):
     """Adding and removing the products from the cart"""
     # Step 1: Login
     log_page = LoginPage(browser_fixture)
     log_page.login(ConfigReader.get_username(), ConfigReader.get_password())
     
-    cart_page = CartPage(driver)
+    cart_page = CartPage(browser_fixture)
 
     # Step 2: Add product in cart
     cart_page.add_product()
