@@ -1,6 +1,9 @@
 from selenium.webdriver.common.by import By
 from utils.waits import WaitUtils
 from pages.base_page import BasePage
+from utils.logger import CustomLogger
+
+logger = CustomLogger.get_logger()
 
 class LoginPage(BasePage):
     username = (By.ID, "user-name")
@@ -24,11 +27,15 @@ class LoginPage(BasePage):
         self.click(self.login_btn)
 
     def get_error_msg(self):
+        error_msg = self.get_text(self.error_msg)
         """Displays error msg if anything goes wrong"""
-        return self.get_text(self.error_msg)
+        logger.info(f"Retrieved login error msg: {error_msg}")
+        return error_msg
         
     def login(self, username, password):
         """Correct login flow"""
+        logger.info(f"Trying to login with the username: {username}")
         self.enter_username(username)
         self.enter_password(password)
+        logger.info("Clicking login button..")
         self.click_login()
