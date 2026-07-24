@@ -12,9 +12,13 @@ def test_successful_login(browser_fixture):
     log_page = LoginPage(browser_fixture)
     log_page.login(ConfigReader.get_username("standard_user"), ConfigReader.get_password())
 
+    # Testing the code for failure
+    # assert "WRONG TEXT" == "Sauce Labs Backpack"
+
     # Step 2: Verifies the inventory page loaded
     inv_page = InventoryPage(browser_fixture)
     assert inv_page.is_inventory_loaded() is True, "Unable to load the inventory page"
+
     assert inv_page.get_product_count() == 6, "Products mismatched"
 
 @pytest.mark.regression
