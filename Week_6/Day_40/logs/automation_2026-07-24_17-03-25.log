@@ -1,0 +1,56 @@
+2026-07-24 17:03:25 [INFO] (conftest.py:15) - 🚀 Starting test execution: 'test_cart'
+2026-07-24 17:03:25 [INFO] (driver_factory.py:19) - Launching edge..
+2026-07-24 17:03:26 [INFO] (driver_factory.py:33) - The base URL: https://www.saucedemo.com 
+2026-07-24 17:03:26 [INFO] (login_page.py:37) - Trying to login with the username: standard_user
+2026-07-24 17:03:27 [INFO] (login_page.py:40) - Clicking login button..
+2026-07-24 17:03:27 [INFO] (cart_page.py:20) - Adding the product to cart...
+2026-07-24 17:03:27 [INFO] (cart_page.py:37) - Current cart count: 1
+2026-07-24 17:03:27 [INFO] (cart_page.py:25) - Removing the product from cart..
+2026-07-24 17:03:36 [INFO] (cart_page.py:37) - Current cart count: 1
+2026-07-24 17:03:36 [ERROR] (conftest.py:47) - ❌ TEST FAILED: 'test_cart'
+2026-07-24 17:03:36 [INFO] (screenshots.py:29) - Screenshot captured successfully and saved to: screenshots\2026-07-24\test_cart_failed_17-03-36.png
+2026-07-24 17:03:39 [INFO] (conftest.py:31) - ⏱️ Finished test 'test_cart' in 13.71 seconds.
+------------------------------------------------------------
+2026-07-24 17:03:39 [INFO] (conftest.py:15) - 🚀 Starting test execution: 'test_checkout'
+2026-07-24 17:03:39 [INFO] (driver_factory.py:19) - Launching edge..
+2026-07-24 17:03:40 [INFO] (driver_factory.py:33) - The base URL: https://www.saucedemo.com 
+2026-07-24 17:03:41 [INFO] (login_page.py:37) - Trying to login with the username: standard_user
+2026-07-24 17:03:41 [INFO] (login_page.py:40) - Clicking login button..
+2026-07-24 17:03:41 [INFO] (cart_page.py:20) - Adding the product to cart...
+2026-07-24 17:03:41 [INFO] (cart_page.py:37) - Current cart count: 1
+2026-07-24 17:03:41 [INFO] (cart_page.py:30) - Navigating to the cart icon..
+2026-07-24 17:03:41 [INFO] (checkout_page.py:21) - Clicking checkout button..
+2026-07-24 17:03:41 [INFO] (checkout_page.py:25) - Entering first name: BVNS
+2026-07-24 17:03:42 [INFO] (checkout_page.py:29) - Entering last name: kuravi
+2026-07-24 17:03:42 [INFO] (checkout_page.py:33) - Entering zip code: 516002
+2026-07-24 17:03:42 [INFO] (checkout_page.py:37) - Clicking continue button..
+2026-07-24 17:03:42 [INFO] (checkout_page.py:41) - Clicking finish button..
+2026-07-24 17:03:42 [INFO] (checkout_page.py:46) - Order status: Thank you for your order!
+2026-07-24 17:03:42 [INFO] (conftest.py:57) - ✅ TEST PASSED: 'test_checkout'
+2026-07-24 17:03:44 [INFO] (conftest.py:31) - ⏱️ Finished test 'test_checkout' in 5.48 seconds.
+------------------------------------------------------------
+2026-07-24 17:03:44 [INFO] (conftest.py:15) - 🚀 Starting test execution: 'test_inventory_item_count_and_titles'
+2026-07-24 17:03:44 [INFO] (driver_factory.py:19) - Launching edge..
+2026-07-24 17:03:45 [INFO] (driver_factory.py:33) - The base URL: https://www.saucedemo.com 
+2026-07-24 17:03:46 [INFO] (login_page.py:37) - Trying to login with the username: standard_user
+2026-07-24 17:03:46 [INFO] (login_page.py:40) - Clicking login button..
+2026-07-24 17:03:46 [INFO] (conftest.py:57) - ✅ TEST PASSED: 'test_inventory_item_count_and_titles'
+2026-07-24 17:03:48 [INFO] (conftest.py:31) - ⏱️ Finished test 'test_inventory_item_count_and_titles' in 4.12 seconds.
+------------------------------------------------------------
+2026-07-24 17:03:48 [INFO] (conftest.py:15) - 🚀 Starting test execution: 'test_successful_login'
+2026-07-24 17:03:48 [INFO] (driver_factory.py:19) - Launching edge..
+2026-07-24 17:03:49 [INFO] (driver_factory.py:33) - The base URL: https://www.saucedemo.com 
+2026-07-24 17:03:50 [INFO] (login_page.py:37) - Trying to login with the username: standard_user
+2026-07-24 17:03:50 [INFO] (login_page.py:40) - Clicking login button..
+2026-07-24 17:03:50 [INFO] (conftest.py:57) - ✅ TEST PASSED: 'test_successful_login'
+2026-07-24 17:03:52 [INFO] (conftest.py:31) - ⏱️ Finished test 'test_successful_login' in 4.1 seconds.
+------------------------------------------------------------
+2026-07-24 17:03:52 [INFO] (conftest.py:15) - 🚀 Starting test execution: 'test_locked_user'
+2026-07-24 17:03:52 [INFO] (driver_factory.py:19) - Launching edge..
+2026-07-24 17:03:53 [INFO] (driver_factory.py:33) - The base URL: https://www.saucedemo.com 
+2026-07-24 17:03:54 [INFO] (login_page.py:37) - Trying to login with the username: locked_out_user
+2026-07-24 17:03:54 [INFO] (login_page.py:40) - Clicking login button..
+2026-07-24 17:03:54 [INFO] (login_page.py:32) - Retrieved login error msg: Epic sadface: Sorry, this user has been locked out.
+2026-07-24 17:03:54 [INFO] (conftest.py:57) - ✅ TEST PASSED: 'test_locked_user'
+2026-07-24 17:03:57 [INFO] (conftest.py:31) - ⏱️ Finished test 'test_locked_user' in 4.06 seconds.
+------------------------------------------------------------
