@@ -1,0 +1,20 @@
+[
+  {
+    "scenario": "Missing Name",
+    "job": "Software Engineer"
+  },
+  {
+    "scenario": "Missing Job",
+    "name": "No Job User"
+  },
+  {
+    "scenario": "Empty Values",
+    "name": "",
+    "job": ""
+  },
+  {
+    "scenario": "Invalid Data Type",
+    "name": 12345,
+    "job": true
+  }
+]
