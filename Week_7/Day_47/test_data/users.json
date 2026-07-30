@@ -1,0 +1,16 @@
+{
+  "create_user": {
+    "name": "peter parker",
+    "job": "air force"
+  },
+  "update_user": {
+    "name": "spiderman",
+    "job": "web developer"
+  },
+  "patch_user": {
+    "job": "matrix architect"
+  },
+  "invalid_user": {
+    "email": "invalid_payload_without_required_fields"
+  }
+}
