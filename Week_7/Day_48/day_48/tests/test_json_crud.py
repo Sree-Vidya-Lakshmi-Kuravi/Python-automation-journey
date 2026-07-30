@@ -13,27 +13,30 @@ def test_json_driven_crud_lifecycle(api_session):
     """
     logger.info("=== STARTING MINI PROJECT: JSON-DRIVEN CRUD SUITE ===")
     
-    # 1. READ PAYLOAD & CREATE USER
+    # 1. READ PAYLOAD & CREATE USER (POST)
     create_payload = get_create_user_payload(index=0)
     create_response = api_client.post_request("/users", session=api_session, payload=create_payload)
     
     assert_status_code(create_response, 201)
-    user_id = create_response.json().get("id", 2)
-    logger.info(f"User created with ID: {user_id}")
+    logger.info("Successfully created mock user resource.")
     
-    # 2. READ USER DETAILS
-    get_response = api_client.get_request(f"/users/{user_id}", session=api_session)
-    assert get_response.status_code in [200, 404]  # Mock APIs don't persist dynamic IDs
+    # Note: On JSONPlaceholder, dynamically created IDs (like 11) aren't saved in the DB.
+    # We use a static target ID (2) for GET, PUT, and DELETE testing.
+    target_id = 2
+
+    # 2. READ USER DETAILS (GET)
+    get_response = api_client.get_request(f"/users/{target_id}", session=api_session)
+    assert_status_code(get_response, 200)
     
-    # 3. UPDATE USER USING JSON DATA
+    # 3. UPDATE USER USING JSON DATA (PUT)
     update_payload = get_update_payload(index=0)
-    update_response = api_client.put_request(f"/users/{user_id}", session=api_session, payload=update_payload)
+    update_response = api_client.put_request(f"/users/{target_id}", session=api_session, payload=update_payload)
     
     assert_status_code(update_response, 200)
     assert_field_value(update_response.json(), "job", update_payload["job"])
     
-    # 4. DELETE USER
-    delete_response = api_client.delete_request(f"/users/{user_id}", session=api_session)
+    # 4. DELETE USER (DELETE)
+    delete_response = api_client.delete_request(f"/users/{target_id}", session=api_session)
     assert delete_response.status_code in [200, 204]
     
     logger.info("=== FINISHED MINI PROJECT: CRUD LIFECYCLE COMPLETE ===")
