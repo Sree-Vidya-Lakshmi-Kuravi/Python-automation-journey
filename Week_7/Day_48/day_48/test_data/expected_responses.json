@@ -1,0 +1,4 @@
+{
+  "create_user_schema_keys": ["name", "job", "id", "createdAt"],
+  "default_sla_seconds": 2.0
+}
