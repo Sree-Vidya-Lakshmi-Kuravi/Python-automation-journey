@@ -3,3 +3,26 @@ __pycache__/
 .env
 .ipynb_checkpoints/
 DSA/
+
+# Ignore Python bytecode
+__pycache__/
+*.py[cod]
+.pytest_cache
+
+# Ignore your virtual environment
+.venv/
+
+# (Optional) Other common environment names
+venv/
+env/
+
+# Ignore distribution/build artifacts
+build/
+dist/
+*.egg-info/
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+allure-results
+__init__.py
