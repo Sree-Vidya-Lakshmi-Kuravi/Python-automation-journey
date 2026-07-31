@@ -1,0 +1,5 @@
+scenario,name,job
+Missing Name,,QA Engineer
+Missing Job,Siri,
+Empty Values,,
+Invalid Values,12345,true
