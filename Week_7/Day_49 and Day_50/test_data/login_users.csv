@@ -1,0 +1,4 @@
+scenario,email,password
+Valid Login,siri.qa@company.com,Pass123!
+Missing Password,mahi.sdet@company.com,
+Invalid Credentials,unknown.user@company.com,WrongPass123
