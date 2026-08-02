@@ -1,0 +1,4 @@
+[
+  { "name": "morpheus", "job": "leader", "expected_status": 201 },
+  { "name": "neo", "job": "developer", "expected_status": 201 }
+]
