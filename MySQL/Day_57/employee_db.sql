@@ -1,0 +1,40 @@
+use automation_testing;
+create table employees 
+	(emp_id int,  
+    first_name varchar(40),
+    last_name varchar(30),
+    email varchar(45),
+    dept varchar(20),
+    designation varchar(50),
+    salary int,
+    exp_yrs int,
+    city varchar(30),
+    joining_date date);
+INSERT INTO employees 
+(emp_id, first_name, last_name, email, dept, designation, salary, exp_yrs, city, joining_date)
+VALUES
+(1, 'Siri', 'Kuravi', 'siri.kuravi@example.com', 'IT', 'Software Engineer', 60000, 2, 'Banglore', '2022-01-15'),
+(2, 'Mahi', 'YB', 'mahi.yb@example.com', 'IT', 'Software Engineer', 75000, 2, 'Banglore', '2020-03-10'),
+(3, 'Ram', 'Kuravi', 'ram.kuravi@example.com', 'Finance', 'Accountant', 50000, 3, 'Delhi', '2021-07-01'),
+(4, 'Vidya', 'Lakshmi', 'vidya.lakshmi@example.com', 'Marketing', 'Marketing Executive', 55000, 2, 'Chennai', '2022-09-12'),
+(5, 'Mahidhar', 'YB', 'mahidhar.yb@example.com', 'Support', 'Support Engineer', 48000, 1, 'Pune', '2023-02-20'),
+(6, 'Seetharam', 'Kuravi', 'seetharam.kuravi@example.com', 'IT', 'Senior Developer', 90000, 7, 'Hyderabad', '2018-11-05'),
+(7, 'Mani', 'YB', 'mani.yb@example.com', 'Finance', 'Financial Analyst', 65000, 4, 'Delhi', '2019-06-18'),
+(8, 'Bhaskar', 'Mani', 'bhaskar.mani@example.com', 'HR', 'Recruiter', 45000, 2, 'Mumbai', '2021-01-25'),
+(9, 'Amarendra', 'Bahubali', 'amar.bb@example.com', 'IT', 'Data Scientist', 95000, 6, 'Bangalore', '2017-08-14'),
+(10, 'Mahendra', 'Bahubali', 'mahendra.bb@example.com', 'Marketing', 'Content Writer', 42000, 1, 'Chennai', '2023-04-03'),
+(11, 'Bhalla', 'Deva', 'bhalla.deva@example.com', 'Support', 'Tech Support', 40000, 2, 'Pune', '2022-12-11'),
+(12, 'Avantika', 'Kuntala', 'avanti.kuntala@example.com', 'Finance', 'Auditor', 70000, 5, 'Delhi', '2019-09-09'),
+(13, 'Devasena', 'Kuntala', 'devasena.kuntala@example.com', 'IT', 'System Admin', 55000, 3, 'Hyderabad', '2021-05-22'),
+(14, 'Sivagami', 'Mahismati', 'sivagami.mahismati@example.com', 'HR', 'HR Executive', 46000, 2, 'Mumbai', '2022-07-30'),
+(15, 'Kattappa', 'Karikala', 'kattappa.karikala@example.com', 'Marketing', 'SEO Specialist', 60000, 4, 'Chennai', '2020-10-19'),
+(16, 'Peter', 'Parker', 'peter.parker@example.com', 'Finance', 'Finance Manager', 95000, 8, 'Delhi', '2016-12-01'),
+(17, 'MJ', 'Mj', 'mj.mj@example.com', 'Support', 'Customer Support', 42000, 2, 'Pune', '2022-03-15'),
+(18, 'Jean', 'Grey', 'jean.grey@example.com', 'IT', 'Frontend Developer', 58000, 3, 'Hyderabad', '2021-11-27'),
+(19, 'Bruce', 'Banner', 'bruce.banner@example.com', 'Finance', 'Treasury Analyst', 72000, 5, 'Delhi', '2019-02-08'),
+(20, 'Tony', 'Stark', 'tony.stark@example.com', 'HR', 'HR Coordinator', 47000, 2, 'Mumbai', '2022-06-21'),
+(21, 'Ethan', 'Hunt', 'ethan.hunt@example.com', 'Marketing', 'Brand Manager', 80000, 6, 'Chennai', '2018-05-13'),
+(22, 'Mahesh', 'Ghattamaneni', 'mahesh.g@example.com', 'Support', 'Helpdesk Engineer', 45000, 2, 'Pune', '2021-10-07'),
+(23, 'Clint', 'Dardon', 'clint.dardon@example.com', 'IT', 'Backend Developer', 62000, 3, 'Hyderabad', '2020-12-29'),
+(24, 'Pepper', 'Potts', 'pepper.potts@example.com', 'Finance', 'Budget Analyst', 68000, 4, 'Delhi', '2019-08-16'),
+(25, 'Jane', 'Foster', 'jane.foster@example.com', 'Marketing', 'Digital Marketer', 72000, 5, 'Chennai', '2018-04-25');
