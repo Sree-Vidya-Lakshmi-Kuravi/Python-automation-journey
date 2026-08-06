@@ -1,0 +1,10 @@
+SELECT emp_id, first_name, salary FROM employees ORDER BY salary DESC LIMIT 5;
+SELECT emp_id, first_name, city FROM employees WHERE city = 'Hyderabad' OR city = 'Bangalore';
+SELECT emp_id, first_name FROM employees WHERE first_name LIKE 'S%';
+SELECT DISTINCT dept FROM employees;
+SELECT emp_id, first_name FROM employees WHERE YEAR(joining_date) BETWEEN '2023' AND '2025';
+SELECT emp_id, first_name, salary FROM employees WHERE salary BETWEEN '60000' AND '90000';
+SELECT emp_id, first_name, email FROM employees WHERE email IS NULL;
+SELECT emp_id, first_name, dept, salary FROM employees WHERE dept = 'IT' ORDER BY salary DESC;
+SELECT emp_id, first_name, dept FROM employees WHERE dept = 'Finance';
+SELECT emp_id, first_name, email FROM employees WHERE email LIKE '%.com'; 
