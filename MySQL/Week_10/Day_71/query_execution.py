@@ -24,12 +24,16 @@ q4_res = cur.fetchall()
 query_5 = cur.execute("Select * from books order by price desc;")
 q5_res = cur.fetchall()
 
+query_6 = cur.execute("Select * from books order by price asc;")
+q6_res = cur.fetchall()
 
 print("Query 1 result: ", q1_res)
 print("Query 2 result: ", q2_res)
 print("Query 3 result: ", q3_res)
 print("Query 4 result: ", q4_res)
 print("Query 5 result: ", q5_res)
+print("Query 6 result: ", q6_res)
+
 
 cur.close()
 conn.close()
