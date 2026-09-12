@@ -56,3 +56,12 @@ INSERT INTO airports (airport_code, airport_name, city, country) VALUES
 ('BOM','Chhatrapati Shivaji Intl','Mumbai','India'),
 ('MAA','Chennai Intl','Chennai','India'),
 ('CCU','Netaji Subhas Intl','Kolkata','India');
+
+
+DESCRIBE payments;
+INSERT INTO payments (
+    payment_id, booking_id, transaction_reference, amount,
+    payment_method, payment_status, payment_date)
+VALUES (12345, 1,'TESTPMT',500,'CARD','INITIATED',NOW());
+
+DESCRIBE customers;
