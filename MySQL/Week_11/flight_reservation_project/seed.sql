@@ -58,7 +58,7 @@ INSERT INTO airports (airport_code, airport_name, city, country) VALUES
 ('CCU','Netaji Subhas Intl','Kolkata','India');
 
 
-DESCRIBE payments;
+DESCRIBE payments; -- Verify the column names of table payments
 INSERT INTO payments (
     payment_id, booking_id, transaction_reference, amount,
     payment_method, payment_status, payment_date)

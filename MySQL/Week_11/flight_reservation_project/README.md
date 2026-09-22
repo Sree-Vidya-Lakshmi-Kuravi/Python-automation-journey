@@ -52,7 +52,6 @@ flight-reservation-db-automation/
 ├── .env.example
 ├── .gitignore
 └── README.md
-```
 
 ---
 
@@ -60,7 +59,6 @@ flight-reservation-db-automation/
 
 The database contains 10 related tables:
 
-```text
 Airlines
 Airports
 Aircrafts
@@ -71,16 +69,13 @@ Bookings
 Passengers
 Payments
 Refunds
-```
 
 The main relationships are:
 
-```text
 Airline → Flight → Seat
 Customer → Booking → Payment → Refund
 Booking → Passenger
 Flight → Booking
-```
 
 ---
 
